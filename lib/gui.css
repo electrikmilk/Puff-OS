@@ -1,0 +1,193 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: url('/res/cursors/default.png'), auto;
+}
+::selection {
+  background: rgba(0, 111, 177, .3);
+}
+::-moz-selection {
+  background: rgba(0, 111, 177, .3);
+}
+.dark-theme ::selection {
+  background: rgba(45, 166, 255, .8);
+  color: #000;
+}
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-track {
+  background: #ddd;
+}
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border: 3px solid #ddd;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, .4);
+}
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, .5);
+}
+/**/
+html, body {
+  background: center / cover no-repeat;
+  color: black;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+}
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.tests {
+  padding: 20px;
+  display: none;
+}
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.disablethis {
+  pointer-events: none;
+  opacity: .5;
+}
+.graythis, .greythis {
+  filter: url("data:image/svg+xml;utf8,&lt;svg xmlns=\'http://www.w3.org/2000/svg\'&gt;&lt;filter id=\'grayscale\'&gt;&lt;feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale");
+  filter: gray;
+  -webkit-filter: grayscale(100%);
+}
+/* GUI */
+input, textarea, select, [contenteditable] {
+  caret-color: #0a89ff;
+  appearance: none;
+  -webkit-appearance: none;
+}
+input, textarea {
+  background-color: white;
+}
+input, textarea, select, button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+  border: 1px solid #c7c7c7;
+  outline: none;
+  cursor: pointer;
+}
+select {
+  background: white url(/res/icons/arrow_down.svg) center right 10px / 10px no-repeat;
+  padding-right: 30px;
+}
+button {
+  text-shadow: 0 0 5px rgba(0, 0, 0, .1);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
+}
+button.primary {
+  border-color: #1080e9;
+  background: rgb(10, 137, 255);
+  background: linear-gradient(180deg, rgba(10, 137, 255, 1) 0%, rgba(0, 116, 223, 1) 50%);
+  color: white;
+}
+button.caution {
+  border-color: #df244b;
+  background: rgb(255, 10, 10);
+  background: linear-gradient(180deg, rgba(255, 10, 10, 1) 0%, rgba(207, 0, 0, 1) 50%);
+  color: white;
+}
+/* Content */
+.boot {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.desktop-container {
+  height: 100vh;
+  width: 100vw;
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.login-window {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+.windows-container {
+  height: 100vh;
+  width: 100vw;
+}
+.window {
+  width: 600px;
+  height: 400px;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+.window-bar {
+  padding: 10px 0;
+  font-size: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+.window-content {
+  width: 100%;
+  height: 100%;
+}
+.window-content iframe {
+  width: 100%;
+  height: 100%;
+}
+.menubar-container, .toolbar-container {
+  padding: 10px;
+  background: #dededeb5;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+}
+.menubar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #555;
+}
+.toolbar-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-top: 1px solid #555;
+}
+.app-item {
+  margin: 5px;
+  background: center / contain no-repeat;
+  width: 64px;
+  height: 64px;
+  display: inline-block;
+}

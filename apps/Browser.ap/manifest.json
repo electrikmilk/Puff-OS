@@ -1,0 +1,7 @@
+{
+  "name": "Browser",
+  "version": "1.0.0",
+  "about": "Basic browser app",
+  "sbin": true,
+  "index": "index.php"
+}

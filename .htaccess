@@ -1,0 +1,10 @@
+RewriteEngine On
+CheckCaseOnly On
+CheckSpelling On
+Options +FollowSymlinks -Indexes
+DirectoryIndex index.php
+RewriteOptions inherit
+
+# Remove file extension from URL
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule !.*\.php$ %{REQUEST_FILENAME}.php [QSA,L]

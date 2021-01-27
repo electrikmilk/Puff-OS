@@ -1,0 +1,24 @@
+html, body {
+  background: black;
+  color: lightgreen;
+  padding: 10px;
+  line-height: 1.4;
+  font-size: 14px;
+  font-family: monospace;
+  caret-color: white;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+input {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  width: -webkit-fill-available;
+  width: fill-available;
+  width: 100%;
+}

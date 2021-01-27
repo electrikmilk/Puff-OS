@@ -1,0 +1,6 @@
+{
+  "name": "Terminal",
+  "version": "1.0.0",
+  "about": "Basic terminal/console app",
+  "sbin": true
+}
