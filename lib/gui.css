@@ -164,7 +164,7 @@ button.caution {
   height: 100%;
 }
 .menubar-container, .toolbar-container {
-  padding: 10px;
+  padding: 5px 10px;
   background: #dededeb5;
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -187,7 +187,7 @@ button.caution {
 .app-item {
   margin: 5px;
   background: center / contain no-repeat;
-  width: 64px;
-  height: 64px;
+  width: 32px;
+  height: 32px;
   display: inline-block;
 }

@@ -9,7 +9,7 @@ $info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"),true);
   <script type="text/javascript" src="/lib/apis/app.js"></script>
   <script>var appVersion = "<?php echo $info['version']; ?>";</script>
 </head>
-<body>
+<body style="opacity:0;background:black;pointer-events:none;user-select:none;">
   <?php
   if($info['index'])$index = $info['index'];
   else $index = "index.html";

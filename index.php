@@ -54,6 +54,6 @@ require_once "lib/php/flush.php";
     </form>
   </div>
 </div>
-<script type="text/javascript" src="boot/init.js" defer></script>
+<script type="text/javascript" src="lib/init.js" defer></script>
 </body>
 </html>

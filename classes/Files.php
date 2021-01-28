@@ -11,7 +11,7 @@ class Files {
             if (!file_exists($path)) throw new Exception("Path '$path' does not appear to exist.");
             if (!is_readable($path)) throw new Exception("Path '$path' does not appear to be readable.");
             if (!is_writeable($path)) trigger_error("Path '$path' appears to be read-only.", E_USER_NOTICE);
-            if($absolute === true)$this->path = "$this->script$path";
+            if(!$absolute)$this->path = "$this->script$path";
             else $this->path = $path;
         }
         catch(Exception $e) {
@@ -116,10 +116,10 @@ class Files {
         $parts = pathinfo($path);
         $info['name'] = $parts['filename'];
         $info['type'] = filetype($path);
+        $info['base'] = $parts['basename'];
         if (is_file($path)) {
-            $info['mime'] = mime_content_type($path);
-            $info['base'] = $parts['basename'];
-            $info['ext'] = $parts['extension'];
+          $info['ext'] = $parts['extension'];
+          $info['mime'] = mime_content_type($path);
         }
         $info['dir'] = $parts['dirname'];
         $info['mod'] = date("Y-m-d H:i:s",filemtime($path));
