@@ -1,6 +1,6 @@
 <?php
 
-// Global file functions
+// old file functions
 // function makeFolder( $name ) {
 //   if ( !file_exists( $name ) )mkdir( $name, 0777, true );
 // }
@@ -24,9 +24,11 @@
 //   makeFolder("tmp");
 // }
 
-$files = new Files("tmp");
-if($files->empty()) {
-  $files->delete();
-  $files = new Files();
+// flush the cache
+/* TODO: each user has their own tmp folder
+and it clears every so often or when they manually clear it */
+$files = Files::getInstance();
+if(!$files->empty("tmp")) {
+  $files->delete("tmp");
   $files->dir("tmp");
 }

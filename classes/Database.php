@@ -1,9 +1,5 @@
 <?php
-/*
- * Created by @electrikmilk, 01-27-2021
- * This file is subject to the terms and conditions defined in
- * file 'LICENSE', which is part of this source code package.
-*/
+
 class Database {
   private static $instance = null;
   private $pdo, $query, $error = false, $results, $rowsCount = 0;
@@ -74,7 +70,7 @@ class Database {
     return false;
   }
 
-  public function modify( $action, $table, $fields = array(), $where = array() ) {
+  private function modify( $action, $table, $fields = array(), $where = array() ) {
     if ( count( $fields ) ) {
       $cols = array_keys( $fields );
       if ( $action === "insert" ) {

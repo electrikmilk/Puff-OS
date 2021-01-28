@@ -1,6 +1,7 @@
 <?php
-require_once "../../lib/frameworks/simple_html_dom.php";
-require_once "../../lib/frameworks/favicon.php";
+require_once "../../lib/apis/application.php";
+require_once "frameworks/simple_html_dom.php";
+require_once "frameworks/favicon.php";
 
 function clean( $string ) { // Used for making feature and listing identifiers, etc.
   return strtolower( preg_replace( '/-+/', '-', preg_replace( '/[^A-Za-z0-9\-]/', '', preg_replace( "/[\"\']/", " ", preg_replace( "/[\/\&%#\$]/", "_", str_replace( ' ', '-', trim( strip_tags( $string ) ) ) ) ) ) ) );
