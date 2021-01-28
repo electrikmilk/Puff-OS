@@ -1,7 +1,9 @@
+html {
+  background: rgba(0, 0, 0, .8) !important;
+}
 html, body {
-  background: black;
   color: lightgreen;
-  padding: 10px;
+  padding: 5px;
   line-height: 1.4;
   font-size: 14px;
   font-family: monospace !important;

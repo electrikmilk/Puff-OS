@@ -1,10 +1,13 @@
 <?php
 require_once "../../lib/apis/application.php";
 $input = $_POST['command'];
-$command = explode(" ",$_POST['command'])[0];
+$split = explode(" ",$_POST['command']);
+$command = $split[0];
 $args = array();
-foreach(explode(" ",str_replace("$command ","",str_replace("\ ","~",$input))) as $arg) {
-  array_push($args,str_replace("~"," ",$arg));
+if(count($split) > 1) {
+  foreach(explode(" ",str_replace("$command ","",str_replace("\ ","~",$input))) as $arg) {
+    array_push($args,str_replace("~"," ",$arg));
+  }
 }
 $return;
 if(!$input)return;
