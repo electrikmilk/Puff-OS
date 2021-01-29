@@ -2,5 +2,6 @@
   "name": "Browser",
   "version": "1.0.0",
   "about": "Basic browser app",
-  "index": "index.php"
+  "index": "index.php",
+  "sbin": true
 }

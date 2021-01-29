@@ -1,0 +1,6 @@
+{
+  "name": "Console",
+  "version": "1.0.0",
+  "about": "View system logs",
+  "sbin": true
+}

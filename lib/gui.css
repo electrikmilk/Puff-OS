@@ -147,6 +147,8 @@ button.caution {
   border-radius: 8px;
   border: 1px solid #ddd;
   box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  display: inline-block;
+  position: fixed;
 }
 .window-bar {
   padding: 5px 0;
@@ -159,7 +161,15 @@ button.caution {
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
   display: grid;
-  grid-template-columns: 0fr 1fr 0fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.window-title {
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+}
+.window-title>div:last-child {
+  text-align: left;
+  margin-left: 5px;
 }
 .window-close {
   padding: 7px 3px;
@@ -169,6 +179,7 @@ button.caution {
   background: darkred;
   color: white;
   border-radius: 50%;
+  float: right;
 }
 .window-content {
   width: 100%;
@@ -186,6 +197,9 @@ button.caution {
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
   box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+}
+.window.ui-draggable-dragging {
+  background: white;
 }
 .window.ui-draggable-dragging .window-content iframe {
   display: none;

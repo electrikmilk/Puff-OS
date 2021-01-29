@@ -1,0 +1,6 @@
+{
+  "name": "Report Bug",
+  "version": "1.0.0",
+  "about": "Report bugs in the system",
+  "sbin": true
+}

@@ -1,3 +1,2 @@
-<?php
-$return = "restarting in 3 secs..."; ?>
-<script>main.system.refresh();</script>
+<?php $return = "restarting terminal..."; ?>
+<script>window.location.reload(true);</script>

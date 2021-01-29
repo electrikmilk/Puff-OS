@@ -1,0 +1,6 @@
+{
+  "name": "Settings",
+  "version": "1.0.0",
+  "about": "Customize your desktop",
+  "sbin": true
+}

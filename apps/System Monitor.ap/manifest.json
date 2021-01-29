@@ -1,6 +1,0 @@
-{
-  "name": "System Monitor",
-  "version": "1.0.0",
-  "about": "Basic system monitor app",
-  "sbin": true
-}

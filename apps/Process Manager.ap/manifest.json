@@ -1,0 +1,6 @@
+{
+  "name": "Process Manager",
+  "version": "1.0.0",
+  "about": "Basic process management app",
+  "sbin": true
+}
