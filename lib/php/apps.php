@@ -4,7 +4,8 @@ $notready = array(
   "Files Manager",
   "Report Bug",
   "Settings",
-  "Screenshot"
+  "Screenshot",
+  "About"
 );
 
 // list of apps...

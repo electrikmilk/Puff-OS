@@ -200,7 +200,6 @@ button.caution {
   height: 100%;
 }
 .menubar-container, .toolbar-container {
-  padding: 5px 10px;
   background: #eeeeee80;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -218,13 +217,54 @@ button.caution {
   left: 0;
   right: 0;
   border-bottom: 1px solid #555;
+  display: grid;
+  grid-template-columns: 0fr 1fr;
+}
+.system-menu {
+  background: url(/res/logo.png) center / 32px no-repeat;
+  padding: 20px;
+}
+.system-menu:hover {
+  background-color: darkblue;
+}
+.system-menu:hover .menubar-menu {
+  display: block !important;
+}
+.menubar-menu {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: #eeeeee80;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+}
+.menubar-menu ul {
+  min-width: 150px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menubar-menu ul li {
+  padding: 10px;
+  font-size: 14px;
+}
+.menubar-menu ul li:hover {
+  background-color: darkblue;
+  color: white;
+}
+.clock {
+  text-align: right;
+  padding: 10px;
 }
 .toolbar-container {
   position: fixed;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 10px;
+  padding: 5px 10px;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 10px 10px 0 0;
   border-top: 1px solid #555;
 }
 .app-item {

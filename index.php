@@ -35,7 +35,14 @@ require_once "lib/php/flush.php";
 <div class="desktop-container" style="display: none;">
   <div class="dialogs-container"></div>
   <div class="windows-container"></div>
-  <div class="menubar-container"></div>
+  <div class="menubar-container">
+    <div class="system-menu">
+      <div class="menubar-menu">
+        <ul></ul>
+      </div>
+    </div>
+    <div class="clock">00:00:00</div>
+  </div>
   <div class="toolbar-container"></div>
 </div>
 <div class="login-container" style="display: none;">
