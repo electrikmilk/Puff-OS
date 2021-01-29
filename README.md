@@ -6,5 +6,4 @@ Mostly a hobby project right now. I've worked on stuff like this in the past but
 
 This project is a WIP (alpha 0.1). Most of the apis and applications are still being developed and worked on.
 
-![Desktop Screenshot]
-(https://i.imgur.com/MrC3A0Y.jpg)
+![Desktop Screenshot](https://i.imgur.com/MrC3A0Y.jpg)
