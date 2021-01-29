@@ -31,7 +31,7 @@ require_once "lib/php/flush.php";
   </div>
 </div>
 
-<div class="boot">Loading...</div>
+<div class="boot"><div class='loader'></div></div>
 <div class="desktop-container" style="display: none;">
   <div class="dialogs-container"></div>
   <div class="windows-container"></div>
