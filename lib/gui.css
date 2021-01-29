@@ -149,6 +149,8 @@ button.caution {
   box-shadow: 0 0 15px rgba(0, 0, 0, .5);
   display: inline-block;
   position: fixed;
+  left: 10%;
+  top: 10%;
 }
 .window-bar {
   padding: 5px 0;
@@ -164,22 +166,28 @@ button.caution {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .window-title {
-  display: grid;
-  grid-template-columns: 0fr 1fr;
+  display: flex;
+  justify-content: center;
 }
 .window-title>div:last-child {
   text-align: left;
   margin-left: 5px;
 }
-.window-close {
+.window-btn {
   padding: 7px 3px;
   margin-right: 5px;
   line-height: 4px;
   font-size: 20px;
-  background: darkred;
-  color: white;
   border-radius: 50%;
   float: right;
+}
+.window-min {
+  background: darkorange;
+  color: white;
+}
+.window-close {
+  background: darkred;
+  color: white;
 }
 .window-content {
   width: 100%;
@@ -193,10 +201,10 @@ button.caution {
 }
 .menubar-container, .toolbar-container {
   padding: 5px 10px;
-  background: #dededeb5;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  box-shadow: 0 0 15px rgba(0, 0, 0, .8);
+  background: #eeeeee80;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 }
 .window.ui-draggable-dragging {
   background: white;
@@ -213,9 +221,10 @@ button.caution {
 }
 .toolbar-container {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 10px;
   border-top: 1px solid #555;
 }
 .app-item {
@@ -224,4 +233,27 @@ button.caution {
   width: 64px;
   height: 64px;
   display: inline-block;
+}
+.app-item:active {
+  opacity: .7;
+}
+.app-item.opening {
+  opacity: .5;
+  pointer-events: none;
+  user-select: none;
+  animation: opening 2s infinite;
+}
+.app-item.open {
+  border-bottom: 3px solid white;
+}
+@keyframes opening {
+  0% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.0);
+  }
 }

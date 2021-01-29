@@ -40,12 +40,7 @@ $(function() {
       }
     );
   });
+  $(".backlog ul").append("<li>Welcome to " + main.osname + "! A web desktop. (" + main.version + ", build " + main.build + ")</li>");
+  $("form#terminal input").val("help");
+  $("form#terminal").submit();
 });
-
-function start() {
-
-}
-
-function end() {
-
-}

@@ -15,4 +15,5 @@ else {
   if(file_exists("bin/$command.php"))include_once "bin/$command.php";
   else $return = "command not found: $command, run 'help' for help";
 }
-echo nl2br(trim(strip_tags($return)));
+if(!$dontstrip)$return = strip_tags($return);
+echo nl2br(trim($return));

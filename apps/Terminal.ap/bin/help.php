@@ -1,11 +1,13 @@
 <?php
+$dontstrip = true;
 $files = Files::getInstance("bin");
-$return .= "available commands:\n";
+$return .= "\n";
 $commands = array();
 foreach($files->dir() as $command) {
   array_push($commands,$command['name']);
 }
 asort($commands);
 foreach($commands as $command) {
-  $return .= "$command\n";
+  $list .= "<div>$command</div>";
 }
+$return .= "available commands:\n<div class='shortlist'>$list</div>";

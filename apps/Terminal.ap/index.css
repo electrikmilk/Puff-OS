@@ -1,5 +1,7 @@
 html {
   background: rgba(0, 0, 0, .8) !important;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
 }
 html, body {
   color: lightgreen;
@@ -36,4 +38,8 @@ input {
   width: 100%;
   padding: 0 5px;
   margin: 0;
+}
+.shortlist {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15%, 1fr));
 }

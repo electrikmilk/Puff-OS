@@ -1,4 +1,5 @@
 <?php
+$dontstrip = true;
 $files = Files::getInstance("../../apps");
 $apps = array();
 foreach($files->dir() as $app) {
@@ -6,5 +7,6 @@ foreach($files->dir() as $app) {
 }
 asort($apps);
 foreach($apps as $app) {
-  $return .= "$app\n";
+  $list .= "$app\n";
 }
+$return .= "<div class='shortlist'>$list</div>";

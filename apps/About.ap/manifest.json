@@ -1,0 +1,6 @@
+{
+  "name": "About",
+  "version": "1.0.0",
+  "about": "Basic about app",
+  "sbin": true
+}
