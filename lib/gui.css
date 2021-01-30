@@ -287,7 +287,7 @@ button.caution {
   background: rgb(255, 255, 255);
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 0.5fr 1fr 0.5fr;
 }
 .window:not(.ui-selected) .window-bar {
   background: #ddd;
@@ -296,12 +296,17 @@ button.caution {
 .window-title {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 600;
-  user-select: none;
 }
-.window-title>div:last-child {
+.window-title>div {
+  display: flex;
+  justify-content: center;
+}
+.window-title>div>div:last-child {
   text-align: left;
   margin-left: 5px;
+  user-select: none;
 }
 .window-btn {
   padding: 7px 3px;
@@ -312,6 +317,7 @@ button.caution {
   float: right;
   color: white;
   border: 0.5px solid #eee;
+  user-select: none;
 }
 .window:not(.ui-selected) .window-btn {
   background: #ccc;
@@ -327,7 +333,7 @@ button.caution {
 .window-content {
   width: -webkit-fill-available;
   position: absolute;
-  top: 30px;
+  top: 29px;
   left: 0;
   right: 0;
   bottom: 0;

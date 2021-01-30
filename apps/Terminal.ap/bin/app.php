@@ -4,6 +4,7 @@ if($args[0]) {
   else if($args[0] === "open")$return = "opened app '{$args[1]}'";
   else if($args[0] === "close")$return = "closed app '{$args[1]}'";
   else return;
-  if($args[1])echo "<script>main.apps.{$args[0]}('{$args[1]}');</script>";
-  echo "<script>main.apps.{$args[0]}();</script>";
+  if($args[1] && $args[0] === "open")echo "<script>main.apps.{$args[0]}('{$args[1]}',true);</script>";
+  else if($args[1])echo "<script>main.apps.{$args[0]}('{$args[1]}');</script>";
+  else echo "<script>main.apps.{$args[0]}();</script>";
 }
