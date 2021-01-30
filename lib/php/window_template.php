@@ -6,7 +6,7 @@ $info = json_decode(file_get_contents($manifest),true);
 $title = $info['name'];
 if(!$info['sbin'])$sandbox = "sandbox";
 ?>
-<div class="window" id="<?php echo $_POST['id']; ?>" data-title="<?php echo $title; ?>" data-version="<?php echo htmlspecialchars($info['about']); ?>" data-about="<?php echo htmlspecialchars($info['about']); ?>" style="display: none;">
+<div class="window ui-selected" id="<?php echo $_POST['id']; ?>" data-title="<?php echo $title; ?>" data-version="<?php echo htmlspecialchars($info['about']); ?>" data-about="<?php echo htmlspecialchars($info['about']); ?>" style="display: none;">
   <div class="window-bar">
     <div></div>
     <div class="window-title"><img src="/apps/<?php echo $app_name; ?>.ap/icon/16.png" class="window-icon"/><div><?php echo $title; ?></div></div>
