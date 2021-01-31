@@ -1,6 +1,7 @@
 {
-  "name": "Report Bug",
+  "name": "Files Manager",
+  "title": "Files",
   "version": "1.0.0",
-  "about": "Report bugs in the system",
+  "about": "Basic files manager",
   "sbin": true
 }
