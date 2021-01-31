@@ -17,6 +17,12 @@ function getDomain( $url, $tld = false ) {
 }
 
 $url = $_GET['url'];
+
+if(!$url) {
+  echo "<p>Enter a url above</p>";
+  return;
+}
+
 $parts = pathinfo($url);
 $domain = getDomain($url);
 if($parts['extension'] && mime_content_type($url))header( "Content-Type: ".mime_content_type($url)."; charset=UTF-8" );

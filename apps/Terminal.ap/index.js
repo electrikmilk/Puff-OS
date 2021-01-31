@@ -15,6 +15,7 @@ $(function() {
     $(".backlog ul").append("<li>> " + command + "</li>");
     $("form#terminal input").prop("disabled", true);
     $("form#terminal").hide();
+    application.title("running " + command + "...");
     main.network.request("/apps/Terminal.ap/shell", "POST", {
         command: command
       },
@@ -23,10 +24,12 @@ $(function() {
         $("form#terminal input").prop("disabled", false)
         $("form#terminal").show();
         if (response.includes("error") || response.includes("not found")) {
-          app.log("command (" + command + ")", "error", response);
+          app.log(command, "error", response);
+          application.title(command + " failed!");
           $(".backlog ul").append("<li class='response' id='error'>" + response + "</li>");
         } else {
-          app.log("command (" + command + ")", "success", response);
+          app.log(command, "success", response);
+          application.title(command);
           if (response) $(".backlog ul").append("<li class='response'>" + response + "</li>");
         }
         $("form#terminal input").focus();
@@ -34,7 +37,8 @@ $(function() {
       function(error) {
         $("form#terminal input").prop("disabled", false);
         $("form#terminal").show();
-        app.log("command failed", "error", error);
+        application.title(command + " failed!");
+        app.log("'" + command + "' command failed", "error", error);
         $(".backlog ul").append("<li class='response' id='error'>failed to run '" + command + "'</li>");
         $("form#terminal input").focus();
       }

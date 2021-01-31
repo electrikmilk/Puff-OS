@@ -1,5 +1,16 @@
 var metadata = {};
 
+$(function() {
+  $("form#address").on("submit", function() {
+    var url = $("#url").val();
+    if (url) {
+      if (!url.includes("http")) url = "https://" + url;
+      document.querySelector("iframe").src = "/apps/Browser.ap/webpage?url=" + url;
+      application.title = url;
+    }
+  });
+});
+
 function finish(status, favicon) {
   if (status === true) {
     metadata['title'] = document.querySelector("iframe").contentWindow.title;

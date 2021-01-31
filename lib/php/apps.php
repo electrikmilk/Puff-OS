@@ -1,7 +1,5 @@
 <?php
 $filter = array(
-  "Browser",
-  "Files Manager",
   "Report Bug",
   "Settings",
   "Screenshot",
