@@ -3,9 +3,10 @@
   "title": false,
   "version": "1.0.0",
   "about": "Basic about app",
+  "index": "index.php",
   "sbin": true,
   "width": "300px",
-  "height": "230px",
+  "height": "260px",
   "x": "30%",
   "y": "30%",
   "min": false

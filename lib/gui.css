@@ -140,23 +140,35 @@ button.caution {
   right: 0;
   border-bottom: 0.5px solid #888;
   display: grid;
-  grid-template-columns: 0fr 1fr;
+  grid-template-columns: 0fr 1fr 1fr;
+  font-size: 14px;
 }
-.system-menu {
+.menubar-menu-container {}
+.menubar-label.menubar-label-icon {
+  padding: 17px 20px;
+}
+.system-menu .menubar-label-icon {
   background: url(/res/logo.png) center / 32px no-repeat;
-  padding: 20px;
 }
-.system-menu:hover {
+.menubar-menu-container {
+  display: inline-block;
+}
+.menubar-menu-container:hover {
   background-color: #1080e9;
 }
-.system-menu:hover .menubar-menu {
+.menubar-label, .clock {
+  padding: 8px 10px;
+}
+.menubar-menu-container:hover .menubar-label {
+  color: white;
+}
+.menubar-menu-container:hover .menubar-menu {
   display: block !important;
 }
 .menubar-menu {
   display: none;
   position: absolute;
-  top: 40px;
-  left: 0px;
+  top: 33px;
   background: rgba(255, 255, 255, .6);
   backdrop-filter: blur(30px);
   -webkit-backdrop-filter: blur(30px);
@@ -182,7 +194,6 @@ button.caution {
 }
 .clock {
   text-align: right;
-  padding: 10px;
 }
 /* Toolbar */
 .toolbar-container {
@@ -309,7 +320,10 @@ button.caution {
   user-select: none;
 }
 .window-btn {
-  padding: 7px 3px;
+  padding: 8px 3px;
+  padding-top: 7px;
+  padding-left: 4px;
+  margin-right: 5px;
   margin-right: 5px;
   line-height: 3px;
   font-size: 20px;

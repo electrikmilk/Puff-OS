@@ -36,11 +36,13 @@ require_once "lib/php/flush.php";
   <div class="dialogs-container"></div>
   <div class="windows-container"></div>
   <div class="menubar-container">
-    <div class="system-menu">
+    <div class="system-menu menubar-menu-container">
+      <div class="menubar-label menubar-label-icon"></div>
       <div class="menubar-menu">
         <ul></ul>
       </div>
     </div>
+    <div class="app-menus"></div>
     <div class="clock">00:00:00</div>
   </div>
   <div class="toolbar-container"></div>

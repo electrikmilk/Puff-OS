@@ -16,7 +16,7 @@ $info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"),true);
   $path = "../../apps/$app.ap/$index";
   if(file_exists($path)) {
     $ext = pathinfo($path,PATHINFO_EXTENSION);
-    if($ext === "php")echo include_once $path;
+    if($ext === "php")include_once $path;
     else echo file_get_contents($path);
   } else echo "<script>
   parent.desktop.log('$app.ap DOM not found! Closing...','warn');

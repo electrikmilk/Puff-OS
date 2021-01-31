@@ -1,3 +1,4 @@
 $(function() {
-  $("h3").html("" + main.osname + " (" + main.version + ", build " + main.build + ")");
+  $("#name").html("<b>" + main.osname + "</b>");
+  $("#version").html(main.version + ", build " + main.build);
 });

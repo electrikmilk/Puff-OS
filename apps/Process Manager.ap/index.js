@@ -8,7 +8,7 @@ $(function() {
       index = i.toString();
       if (index.length === 1) index = "0" + i;
       list += "<tr>";
-      if (item.app === true) list += "<td><img src='/apps/" + item.name + ".ap/icon/16.png' width='16'/></td>";
+      if (item.app === true) list += "<td><img src='/apps/" + item.name + ".ap/icon/32.png' width='24'/></td>";
       else list += "<td></td>";
       list += "<td>" + index + "</td>";
       list += "<td>" + item.name + "</td>";

@@ -8,4 +8,4 @@ if($args[0]) {
     <script>$(".backlog ul").append("<li class='response'>" + main.system.cache.<?php echo $args[0]; ?>() + "</li>");</script>
     <?php
   }
-}
+} else $return = "example usage: cache count, cache purge";

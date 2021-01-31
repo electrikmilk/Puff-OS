@@ -3,5 +3,7 @@
   "version": "1.0.0",
   "about": "Basic browser app",
   "index": "index.php",
-  "sbin": true
+  "sbin": true,
+  "width": "800px",
+  "height": "500px"
 }

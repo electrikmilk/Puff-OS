@@ -1,6 +1,18 @@
 {
   "name": "Terminal",
   "version": "1.0.0",
-  "about": "Basic terminal/console app",
-  "sbin": true
+  "about": "Basic terminal app",
+  "sbin": true,
+  "menus": {
+    "File": {
+      "New Terminal": {
+        "onClick": "apps.open(&quot;%name&quot;,true)"
+      }
+    },
+    "Edit": {
+      "Option 1": {
+        "onClick": ""
+      }
+    }
+  }
 }
