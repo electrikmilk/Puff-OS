@@ -318,7 +318,6 @@ button.caution {
   text-align: left;
   margin-left: 5px;
   user-select: none;
-  width: 130px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
