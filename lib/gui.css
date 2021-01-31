@@ -318,6 +318,10 @@ button.caution {
   text-align: left;
   margin-left: 5px;
   user-select: none;
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .window-btn {
   padding: 8px 3px;
