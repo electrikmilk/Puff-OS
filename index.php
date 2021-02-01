@@ -13,7 +13,11 @@ require_once "lib/php/flush.php";
 <body style="background-color:black;">
 <div class="system-audio"></div>
 
-<div class="tests">
+<div class="popup-allow" style="color: white;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;justify-content: center;align-items: center;">
+  <h3>Nothing happening? Allow popups.</h3>
+</div>
+
+<div class="tests" style="display: none;">
   <div style="height: 150px;width: 200px;border: 1px solid white;overflow: auto;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div><br/>
   <div><input type="text" placeholder="Placeholder..."/></div><br/>
   <div><input type="email" placeholder="Email address..."/></div><br/>
