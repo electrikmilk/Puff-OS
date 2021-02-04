@@ -2,5 +2,24 @@
   "name": "Terminal",
   "version": "1.0.0",
   "about": "Basic terminal app",
-  "sbin": true
+  "sbin": true,
+  "menus": {
+    "Commands": {
+      "Refresh Toolbar": {
+        "function": "command('app list')"
+      },
+      "Check network": {
+        "function": "command('net')"
+      },
+      "View processes": {
+        "function": "command('top')"
+      },
+      "Clear output": {
+        "function": "command('clear')"
+      },
+      "Help": {
+        "function": "command('help')"
+      }
+    }
+  }
 }

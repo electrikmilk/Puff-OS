@@ -31,9 +31,11 @@ if(file_exists($manifest)) {
         <ul>
           <?php
           foreach ($items as $label => $opt) {
+            unset($onclick,$function);
             $item_label = str_replace("%name",$manifest['name'],$label);
-            $onclick = str_replace("%name",$manifest['name'],$opt['onClick']);
-            echo "<li onclick='$onclick'>$item_label</li>";
+            if($opt['onClick'])$onclick = "onclick='".str_replace("%name",$manifest['name'],$opt['onClick'])."'";
+            else if($opt['function'])$function = 'data-function="'.$opt['function'].'"';
+            echo "<li $onclick $function>$item_label</li>";
             if($opt['divider'])echo "<hr/>";
           }
           ?>

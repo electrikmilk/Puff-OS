@@ -48,3 +48,8 @@ $(function() {
   $("form#terminal input").val("help");
   $("form#terminal").submit();
 });
+
+function command(string) {
+  $("form#terminal input").val(string);
+  $("form#terminal").submit();
+}
