@@ -9,12 +9,14 @@ require_once "lib/php/flush.php";
 <html>
 <head>
   <title>Loading...</title>
+  <link rel="icon" href="/res/logo.png"/>
 </head>
 <body style="background-color:black;">
 <div class="system-audio"></div>
 
-<div class="popup-allow" style="color: white;display: none;position: fixed;top: 0;left: 0;right: 0;bottom: 0;justify-content: center;align-items: center;">
-  <h3>Nothing happening? Allow popups.</h3>
+<div class="in-popup">
+  <!-- <button>Open Puff OS</button> -->
+  <p>Nothing happening? Allow popups.</p>
 </div>
 
 <div class="tests" style="display: none;">

@@ -17,7 +17,6 @@ if(file_exists($manifest)) {
   }
   $style = implode(";",$style);
   if($_POST['data']) {
-    // $data = json_decode($_POST['data'],true);
     foreach($_POST['data'] as $key => $val) {
       $data[$key] = "$key=$val";
     }
@@ -29,13 +28,13 @@ if(file_exists($manifest)) {
       <div></div>
       <div class="window-title">
         <?php
-        if($info['title'] !== false)echo "<div><img src='/apps/$app_name.ap/icon/32.png' width='16' height='16' class='window-icon'/><div>$title</div></div>";
+        if($info['title'] !== false)echo "<div><img src='/apps/$app_name.ap/icon/32.png' width='20' height='20' class='window-icon'/><div>$title</div></div>";
         ?>
       </div>
       <div>
         <?php
-        if($info['close'] !== false)echo "<div class='window-btn window-close'>&times;</div>";
-        if($info['min'] !== false)echo "<div class='window-btn window-min'>-</div>";
+        if($info['min'] !== false)echo "<div class='window-btn window-min'><span></span></div>";
+        if($info['close'] !== false)echo "<div class='window-btn window-close'><span></span></div>";
         ?>
       </div>
     </div>
