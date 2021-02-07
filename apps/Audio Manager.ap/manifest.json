@@ -1,0 +1,6 @@
+{
+  "name": "Audio Manager",
+  "version": "1.0.0",
+  "about": "Basic audio process management app",
+  "sbin": true
+}

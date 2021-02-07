@@ -22,13 +22,15 @@ if(file_exists($manifest)) {
     }
     $data = "&".implode("&",$data);
   }
+  $icon = "/apps/$app_name.ap/icon/32.png";
+  if(!file_exists("../apps/$app_name.ap/icon/32.png"))$icon = "/res/icons/app.svg";
   ?>
   <div class="window ui-selected" id="<?php echo $_POST['id']; ?>" data-title="<?php echo $title; ?>" style="<?php echo $style; ?>">
     <div class="window-bar">
       <div></div>
       <div class="window-title">
         <?php
-        if($info['title'] !== false)echo "<div><img src='/apps/$app_name.ap/icon/32.png' width='20' height='20' class='window-icon'/><div>$title</div></div>";
+        if($info['title'] !== false)echo "<div><img src='$icon' width='20' height='20' class='window-icon'/><div>$title</div></div>";
         ?>
       </div>
       <div>

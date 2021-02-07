@@ -1,0 +1,9 @@
+{
+  "name": "Audio Player",
+  "version": "1.0.0",
+  "about": "A simple audio player",
+  "index": "player.php",
+  "sbin": true,
+  "width": "300px",
+  "height": "150px"
+}

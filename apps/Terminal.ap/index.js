@@ -47,6 +47,10 @@ $(function() {
   $(".backlog ul").append("<li>Welcome to " + main.osname + "! A web desktop. (" + main.version + ", build " + main.build + ")</li>");
   $("form#terminal input").val("help");
   $("form#terminal").submit();
+  setTimeout(function() {
+    $("form#terminal input").val("apps");
+    $("form#terminal").submit();
+  }, 500);
 });
 
 function command(string) {

@@ -7,6 +7,6 @@ foreach($files->dir() as $app) {
 }
 asort($apps);
 foreach($apps as $app) {
-  $list .= "$app\n";
+  $list .= "<div><a href='javascript:;' onclick='main.apps.open(&quot;$app&quot;);'>$app</a></div>";
 }
 $return .= "<div class='shortlist'>$list</div>";

@@ -10,6 +10,9 @@ html, body {
   font-size: 14px;
   font-family: monospace !important;
 }
+.backlog a {
+  color: skyblue;
+}
 form {
   display: flex;
 }
@@ -27,16 +30,16 @@ ul li#error {
 }
 input {
   font-family: monospace !important;
-  background: none;
-  border: none;
+  background: none !important;
+  border: none !important;
   color: lightgreen;
-  caret-color: lightgreen;
-  font-size: 14px;
+  caret-color: lightgreen !important;
+  font-size: 14px !important;
   outline: none;
   width: -webkit-fill-available;
   width: fill-available;
   width: 100%;
-  padding: 0 5px;
+  padding: 0 5px !important;
   margin: 0;
 }
 .shortlist {

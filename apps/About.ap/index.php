@@ -3,7 +3,7 @@ $app_name = $_GET['name'];
 if(!$app_name) {
   ?>
   <img src="/res/logo.png" width="64"/>
-  <p id="name"></p>
+  <h3 id="name"></h3>
   <p id="version"></p>
   <p>A web desktop</p>
   <p>
@@ -12,9 +12,11 @@ if(!$app_name) {
   $manifest = "../../apps/$app_name.ap/manifest.json";
   if(file_exists($manifest)) {
     $manifest = json_decode(file_get_contents($manifest),true);
+    $icon = "/apps/$app_name.ap/icon/512.png";
+    if(!file_exists("../../apps/$app_name.ap/icon/512.png"))$icon = "/res/icons/app.svg";
     ?>
-    <img src="/apps/<?php echo $app_name; ?>.ap/icon/512.png" width="64"/>
-    <p><b><?php echo $manifest['name']; ?></b></p>
+    <img src="<?php echo $icon; ?>" width="64"/>
+    <h3><?php echo $manifest['name']; ?></h3>
     <p>Version <?php echo $manifest['version']; ?></p>
     <p><?php echo $manifest['about']; ?></p>
     <?php

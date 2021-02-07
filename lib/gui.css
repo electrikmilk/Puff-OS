@@ -82,19 +82,19 @@ hr {
   -webkit-filter: grayscale(100%);
 }
 /* GUI */
-input, textarea, select, [contenteditable] {
+input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea, select, [contenteditable] {
   caret-color: #0a89ff;
   appearance: none;
   -webkit-appearance: none;
 }
-input, textarea {
+input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea {
   background-color: white;
   cursor: text;
 }
 select, button {
   cursor: pointer;
 }
-input, textarea, select, button {
+input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea, select, button {
   padding: 5px 10px;
   border-radius: 3px;
   font-size: 13px;
@@ -164,12 +164,12 @@ button.caution:active {
   right: 0;
   display: grid;
   grid-template-columns: 0fr 1fr 1fr;
-  font-size: 14px;
+  font-size: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 .menubar-menu-container {}
 .menubar-label.menubar-label-icon {
-  padding: 17px 20px;
+  padding: 17px 25px;
 }
 .system-menu .menubar-label-icon {
   background: url(/res/menu/logo.png) center / 32px no-repeat;
@@ -180,8 +180,11 @@ button.caution:active {
 .menubar-menu-container {
   display: inline-block;
 }
-.menubar-label, .clock {
+.menubar-label {
   padding: 8px 10px;
+}
+.clock {
+  padding: 8px 15px;
 }
 .menubar-menu-container:hover .menubar-label {
   color: white;
@@ -192,7 +195,7 @@ button.caution:active {
 .menubar-menu {
   display: none;
   position: absolute;
-  top: 33px;
+  top: 37px;
   background: rgba(255, 255, 255, .9);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -200,7 +203,6 @@ button.caution:active {
   border-radius: 0 0 5px 5px;
   overflow: hidden;
   z-index: 15;
-  border: 0.5px solid #888;
 }
 .menubar-menu ul {
   min-width: 230px;
@@ -209,8 +211,8 @@ button.caution:active {
   padding: 5px 0;
 }
 .menubar-menu li {
-  padding: 5px 10px;
-  font-size: 14px;
+  padding: 3px 10px;
+  font-size: 15px;
 }
 .menubar-menu-container:hover, .menubar-menu ul li:hover {
   background: rgb(98, 177, 251);
@@ -314,7 +316,6 @@ button.caution:active {
 .window:not(.ui-selected) {
   filter: brightness(90%);
   box-shadow: 0 0 5px rgba(0, 0, 0, .3);
-  color: #888;
   z-index: 0;
 }
 .window-bar {
@@ -339,10 +340,12 @@ button.caution:active {
 }
 .window:not(.ui-selected) .window-bar {
   background: #dedede;
-  color: #555;
+}
+.window:not(.ui-selected) .window-title>div>div:last-child {
+  background-color: #888;
 }
 .window-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 .window-title>div {
@@ -363,9 +366,7 @@ button.caution:active {
   -moz-background-clip: text;
   background-clip: text;
 }
-.window-icon {
-  margin-top: -2px;
-}
+.window-icon {}
 .window-btn {
   padding: 3px;
   border-radius: 50%;
@@ -387,14 +388,10 @@ button.caution:active {
   opacity: 0;
 }
 .window-btn span {
-  /* opacity: 0; */
   width: 8px;
   height: 8px;
   background: center / contain no-repeat;
 }
-/* .window-bar:hover .window-btn span {
-  opacity: 1;
-} */
 .window-min {
   background: rgb(255, 218, 198);
   background: -webkit-linear-gradient(rgba(255, 218, 198, 1) 0%, rgba(182, 70, 0, 1) 100%);
@@ -425,6 +422,12 @@ button.caution:active {
 }
 .window-close span {
   background-image: url(/res/icons/close.svg);
+}
+.window:not(.ui-selected) .window-content {
+  background: white;
+}
+.window:not(.ui-selected) .window-content iframe {
+  opacity: .7;
 }
 .window-content {
   width: -webkit-fill-available;

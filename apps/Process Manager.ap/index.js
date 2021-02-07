@@ -3,7 +3,7 @@ var cantkill = ["system", "desktop"];
 $(function() {
   setInterval(function() {
     var i = 1;
-    var list = "<table><thead><th></th><th>#</th><th>command</th><th>pid</th><th>type</th><th></th></thead><tbody>";
+    var list = "<table><thead><th></th><th>#</th><th>process</th><th>id</th><th>type</th><th></th></thead><tbody>";
     main.processes.forEach(function(item) {
       index = i.toString();
       if (item.app === true) var type = "app";
@@ -23,7 +23,7 @@ $(function() {
     });
     list += "</tbody></table>";
     if ($(".output").html() !== list) $(".output").html(list);
-  }, 300);
+  }, 500);
 });
 
 function start() {
