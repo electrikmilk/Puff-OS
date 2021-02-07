@@ -43,8 +43,8 @@ hr {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
-h1, h2, h3, p {
-  margin: 3px 0;
+h1, h2, h3, h4, p {
+  margin: 5px 0;
 }
 .tests {
   padding: 20px;
@@ -100,28 +100,45 @@ select, button {
 input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea, select, button {
   padding: 5px 10px;
   border-radius: 3px;
-  font-size: 13px;
+  font-size: 14px;
   border: 1px solid #dedede;
   outline: none;
+}
+input:focus, button:focus, select:focus {
+  border-color: #0a89ff;
+  box-shadow: 0 0 5px #0a89ff;
 }
 select {
   background: white url(/res/icons/arrow_down.svg) center right 10px / 10px no-repeat;
   padding-right: 30px;
 }
 button {
+  padding: 5px 20px;
   text-shadow: 0 0 5px rgba(0, 0, 0, .1);
   background: rgb(255, 255, 255);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
+  background: -webkit-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
+  background: -o-linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
+  background: linear-gradient(rgba(255, 255, 255, 1) 0%, rgba(223, 223, 223, 1) 50%);
+}
+button:active {
+  background: rgb(223, 223, 223);
+  background: -webkit-linear-gradient(rgba(223, 223, 223, 1) 0%, rgba(255, 255, 255, 1) 50%);
+  background: -o-linear-gradient(rgba(223, 223, 223, 1) 0%, rgba(255, 255, 255, 1) 50%);
+  background: linear-gradient(rgba(223, 223, 223, 1) 0%, rgba(255, 255, 255, 1) 50%);
 }
 button.primary {
   border-color: #1080e9;
   background: rgb(98, 177, 251);
-  background: linear-gradient(180deg, rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+  background: -webkit-linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+  background: -o-linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+  background: linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
   color: white;
 }
 button.primary:active {
   background: rgba(16, 128, 233, 1);
-  background: linear-gradient(180deg, rgba(16, 128, 233, 1) 0%, rgba(98, 177, 251, 1) 100%);
+  background: -webkit-linear-gradient(rgba(16, 128, 233, 1) 0%, rgba(98, 177, 251, 1) 100%);
+  background: -o-linear-gradient(rgba(16, 128, 233, 1) 0%, rgba(98, 177, 251, 1) 100%);
+  background: linear-gradient(rgba(16, 128, 233, 1) 0%, rgba(98, 177, 251, 1) 100%);
 }
 button.caution {
   background: rgb(249, 172, 172);
@@ -132,6 +149,7 @@ button.caution {
   color: white;
 }
 button.caution:active {
+  background: rgba(176, 0, 0, 1);
   background: -webkit-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
   background: -o-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
   background: linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
@@ -357,7 +375,7 @@ button.caution:active {
 }
 .window-title>div>div:last-child {
   text-align: left;
-  margin-left: 5px;
+  margin-left: 8px;
   user-select: none;
   white-space: nowrap;
   overflow: hidden;

@@ -1,0 +1,6 @@
+{
+  "name": "Dialogs",
+  "version": "1.0.0",
+  "about": "For testing and showcasing dialogs API",
+  "sbin": true
+}

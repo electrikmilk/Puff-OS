@@ -11,6 +11,7 @@ else {
     <button type="submit" class="play">Play</button>
     <button type="submit" class="pause">Pause</button>
     <button type="submit" class="stop">Stop</button>
+    <input type="range" min="0" max="1" step="0.1" class="volume"/>
   </div>
   <?php
 }

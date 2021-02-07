@@ -18,13 +18,15 @@ if($info['title'] !== false)$title = $info['name'];
     <div class="dialog">
       <h3 class="dialog-title"></h3>
       <p class="dialog-message"></p>
+      <form>
       <div class="dialog-input">
-          <input type="text" id="dialog-input-textbox"/>
+          <input type="text" class="dialog-input-textbox" autocomplete="off"/>
       </div>
       <div class="dialog-buttons">
         <button type="submit" class="primary dialog-confirm">OK</button>
         <button type="submit" class="dialog-cancel">Cancel</button>
       </div>
+    </form>
     </div>
   </div>
   <?php
