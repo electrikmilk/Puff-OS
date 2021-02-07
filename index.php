@@ -19,24 +19,6 @@ require_once "lib/php/flush.php";
   <p>Nothing happening? Allow popups.</p>
 </div>
 
-<div class="tests" style="display: none;">
-  <div style="height: 150px;width: 200px;border: 1px solid white;overflow: auto;"><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></div><br/>
-  <div><input type="text" placeholder="Placeholder..."/></div><br/>
-  <div><input type="email" placeholder="Email address..."/></div><br/>
-  <div><input type="password" placeholder="Password..."/></div><br/>
-  <div>
-    <select>
-      <option>option</option>
-    </select>
-  </div><br/>
-  <div><textarea placeholder="sample textarea..."></textarea></div><br/>
-  <div>
-    <button type="submit">Default</button>
-    <button type="submit" class="primary">Primary</button>
-    <button type="submit" class="caution">Secondary</button>
-  </div>
-</div>
-
 <div class="boot"><div class='loader'></div></div>
 <div class="desktop-container" style="display: none;">
   <div class="dialogs-container"></div>

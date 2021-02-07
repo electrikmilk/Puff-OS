@@ -14,6 +14,19 @@ if($info['title'] !== false)$title = $info['name'];
   </script>
 </head>
 <body style="opacity:0;background:black;pointer-events:none;user-select:none;">
+  <div class="dialogs-container">
+    <div class="dialog">
+      <h3 class="dialog-title"></h3>
+      <p class="dialog-message"></p>
+      <div class="dialog-input">
+          <input type="text" id="dialog-input-textbox"/>
+      </div>
+      <div class="dialog-buttons">
+        <button type="submit" class="primary dialog-confirm">OK</button>
+        <button type="submit" class="dialog-cancel">Cancel</button>
+      </div>
+    </div>
+  </div>
   <?php
   if($info['index'])$index = $info['index'];
   else $index = "index.html";

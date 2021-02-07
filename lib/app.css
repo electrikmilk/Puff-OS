@@ -1,3 +1,32 @@
 html {
   background: white;
 }
+.dialogs-container {
+  background: rgba(150, 150, 150, .5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.dialog {
+  display: none;
+  border: 2px solid #efefef;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  min-width: 200px;
+}
+.dialog-input {
+  display: none;
+  padding: 15px 0;
+}
+.dialog-buttons {
+  margin-top: 10px;
+  column-gap: 10px;
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "UI Gallery",
+  "version": "1.0.0",
+  "about": "Gallery of UI elements for testing",
+  "sbin": true,
+  "width": "300px"
+}
