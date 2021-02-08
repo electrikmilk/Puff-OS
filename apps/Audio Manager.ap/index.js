@@ -20,7 +20,7 @@ $(function() {
           list += "<td><input type='range' min='0' max='1' step='0.1' value='" + vol + "' onchange='changeVol(&quot;" + process.id + "&quot;,this.value);'</td>";
           list += "<td>" + process.id + "</td>";
           list += "<td>" + type + "</td>";
-          if (!cantkill.includes(process.name)) list += "<td><a href='javascript:;' onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</a></td>";
+          if (!cantkill.includes(item.name)) list += "<td><button onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
           else list += "<td></td>";
           list += "</tr>";
           ++i;
@@ -30,10 +30,11 @@ $(function() {
     list += "</tbody></table>";
     if ($(".output").html() !== list) $(".output").html(list);
   }, 1500);
+  Window.show();
 });
 
 function kill(id, name) {
-  application.dialog.ask("Kill audio for '" + name + "'", 'Are you sure?', function() {
+  Window.dialog.ask("Kill audio for '" + name + "'", 'Are you sure?', function() {
     main.kill_audio(id);
   });
 }
@@ -44,10 +45,6 @@ function changeVol(id, val) {
   });
 }
 
-function start() {
-
-}
-
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

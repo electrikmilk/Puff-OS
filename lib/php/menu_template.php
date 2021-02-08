@@ -9,18 +9,18 @@ if(file_exists($manifest)) {
   if($info['name'] !== "About")array_push($menus,
     array("<b>$title</b>"=>array(
       "About $title"=>array(
-        "onClick"=>"apps.about(&quot;$title&quot;)"
+        "onclick"=>"apps.about(&quot;$title&quot;)"
       ),
       "Reload $title"=>array(
-        "onClick"=>"apps.refresh(&quot;$id&quot;,true)",
+        "onclick"=>"apps.refresh(&quot;$id&quot;,true)",
         "divider"=>true
       ),
       "New $title"=>array(
-        "onClick"=>"apps.open(&quot;$title&quot;,true)",
+        "onclick"=>"apps.open(&quot;$title&quot;,true)",
         "divider"=>true
       ),
       "Quit $title"=>array(
-        "onClick"=>"apps.close(&quot;$id&quot;)"
+        "onclick"=>"apps.close(&quot;$id&quot;)"
       )
     ))
   );

@@ -15,7 +15,7 @@ $(function() {
     $(".backlog ul").append("<li>> " + command + "</li>");
     $("form#terminal input").prop("disabled", true);
     $("form#terminal").hide();
-    application.title("running " + command + "...");
+    Window.title("running " + command + "...");
     main.network.request("/apps/Terminal.ap/shell", "POST", {
         command: command
       },
@@ -29,7 +29,7 @@ $(function() {
           $(".backlog ul").append("<li class='response' id='error'>" + response + "</li>");
         } else {
           app.log(command, "success", response);
-          application.title(command);
+          Window.title(command);
           if (response) $(".backlog ul").append("<li class='response'>" + response + "</li>");
         }
         $("form#terminal input").focus();
@@ -37,16 +37,13 @@ $(function() {
       function(error) {
         $("form#terminal input").prop("disabled", false);
         $("form#terminal").show();
-        application.title(command + " failed!");
+        Window.title(command + " failed!");
         app.log("'" + command + "' command failed", "error", error);
         $(".backlog ul").append("<li class='response' id='error'>failed to run '" + command + "'</li>");
         $("form#terminal input").focus();
       }
     );
   });
-});
-
-function start() {
   $(".backlog ul").append("<li>Welcome to " + main.osname + "! A web desktop. (" + main.version + ", build " + main.build + ")</li>");
   $("form#terminal input").val("help");
   $("form#terminal").submit();
@@ -54,14 +51,14 @@ function start() {
     $("form#terminal input").val("apps");
     $("form#terminal").submit();
   }, 500);
-  main.start(app.id);
-}
+  Window.show();
+});
 
 function command(string) {
   $("form#terminal input").val(string);
   $("form#terminal").submit();
 }
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

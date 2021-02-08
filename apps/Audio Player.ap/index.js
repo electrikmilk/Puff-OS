@@ -3,6 +3,7 @@ var audio;
 $(function() {
   audio = main.apps.audio(app);
   if (file) load(file);
+  Window.show();
 });
 
 function load(url) {
@@ -24,6 +25,6 @@ function load(url) {
   }, 1500);
 }
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

@@ -1,7 +1,8 @@
 $(function() {
   application.title = "Files Manager";
+  application.start();
 });
 
 function end() {
-  app.kill();
+  application.kill();
 }

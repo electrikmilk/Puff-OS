@@ -1,3 +1,7 @@
-function end() {
-  app.kill();
+$(function() {
+  Window.show();
+})
+
+function close() {
+  Window.close();
 }

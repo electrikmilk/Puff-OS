@@ -1,7 +1,7 @@
 $(function() {
-
+  Window.show();
 });
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

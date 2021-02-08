@@ -104,7 +104,7 @@ input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea, s
   border: 1px solid #dedede;
   outline: none;
 }
-input:focus, button:focus, select:focus {
+input:focus, textarea:focus, button:focus, select:focus {
   border-color: #0a89ff;
   box-shadow: 0 0 5px #0a89ff;
 }

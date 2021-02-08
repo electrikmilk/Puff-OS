@@ -9,6 +9,7 @@ $(function() {
       application.title = url;
     }
   });
+  Window.show();
 });
 
 function finish(status, favicon) {
@@ -20,10 +21,6 @@ function finish(status, favicon) {
   }
 }
 
-function start() {
-
-}
-
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

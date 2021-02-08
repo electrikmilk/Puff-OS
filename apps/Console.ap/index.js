@@ -6,8 +6,9 @@ $(function() {
     });
     if ($(".output ul").html() !== list) $(".output ul").html(list);
   }, 500);
+  Window.show();
 });
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }
