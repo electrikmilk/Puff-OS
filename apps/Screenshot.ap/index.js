@@ -7,3 +7,7 @@ function screenshot() {
     document.querySelector(".output").appendChild(canvas);
   });
 }
+
+function end() {
+  app.kill();
+}

@@ -4,6 +4,17 @@
   "about": "Basic terminal app",
   "sbin": true,
   "menus": {
+    "Tools": {
+      "Console": {
+        "onclick": "apps.open('Console')"
+      },
+      "Audio Manager": {
+        "onclick": "apps.open('Audio Manager')"
+      },
+      "Process Manager": {
+        "onclick": "apps.open('Process Manager')"
+      }
+    },
     "Commands": {
       "Refresh Toolbar": {
         "function": "command('app list')"
@@ -19,6 +30,17 @@
       },
       "Help": {
         "function": "command('help')"
+      }
+    },
+    "Demos": {
+      "Not a virus": {
+        "onclick": "apps.open('Not a virus')"
+      },
+      "Dialogs": {
+        "onclick": "apps.open('Dialogs')"
+      },
+      "UI Gallery": {
+        "onclick": "apps.open('Dialogs')"
       }
     }
   }

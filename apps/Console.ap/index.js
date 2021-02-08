@@ -7,3 +7,7 @@ $(function() {
     if ($(".output ul").html() !== list) $(".output ul").html(list);
   }, 500);
 });
+
+function end() {
+  app.kill();
+}

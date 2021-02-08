@@ -4,8 +4,7 @@ $manifest = "../apps/$app_name.ap/manifest.json";
 if(file_exists($manifest)) {
   $info = json_decode(file_get_contents($manifest),true);
   $title = $info['name'];
-  if($info['title'])$title = $info['title'];
-  if(!$info['sbin'])$sandbox = "sandbox";
+  if(!$info['sbin'])$sandbox = "sandbox='allow-same-origin allow-scripts allow-popups allow-forms'";
   $style = array();
   $style["display"] = "none"; // hide the window initally, this way only shown when ready
   if($info['width'])$style["width"] = $info['width'];
@@ -25,7 +24,7 @@ if(file_exists($manifest)) {
   $icon = "/apps/$app_name.ap/icon/32.png";
   if(!file_exists("../apps/$app_name.ap/icon/32.png"))$icon = "/res/icons/app.svg";
   ?>
-  <div class="window ui-selected" id="<?php echo $_POST['id']; ?>" data-title="<?php echo $title; ?>" style="<?php echo $style; ?>">
+  <div class="window ui-selected" id="<?php echo $_POST['id']; ?>" data-title="<?php echo $app_name; ?>" style="<?php echo $style; ?>">
     <div class="window-bar">
       <div></div>
       <div class="window-title">

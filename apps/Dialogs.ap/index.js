@@ -28,3 +28,7 @@ $(function() {
 function output(log) {
   $(".output").append("<p>" + log + "</p>");
 }
+
+function end() {
+  app.kill();
+}

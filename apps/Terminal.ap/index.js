@@ -44,6 +44,9 @@ $(function() {
       }
     );
   });
+});
+
+function start() {
   $(".backlog ul").append("<li>Welcome to " + main.osname + "! A web desktop. (" + main.version + ", build " + main.build + ")</li>");
   $("form#terminal input").val("help");
   $("form#terminal").submit();
@@ -51,9 +54,14 @@ $(function() {
     $("form#terminal input").val("apps");
     $("form#terminal").submit();
   }, 500);
-});
+  main.start(app.id);
+}
 
 function command(string) {
   $("form#terminal input").val(string);
   $("form#terminal").submit();
+}
+
+function end() {
+  app.kill();
 }

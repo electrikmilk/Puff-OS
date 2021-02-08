@@ -16,7 +16,7 @@ $(function() {
       list += "<td>" + item.name + "</td>";
       list += "<td>" + item.id + "</td>";
       list += "<td>" + type + "</td>";
-      if (!cantkill.includes(item.name)) list += "<td><a href='javascript:;' onclick='kill(&quot;" + item.id + "&quot;,&quot;" + item.name + "&quot;);'>Kill</a></td>";
+      if (!cantkill.includes(item.name)) list += "<td><button onclick='kill(&quot;" + item.id + "&quot;,&quot;" + item.name + "&quot;);'>Kill</button></td>";
       else list += "<td></td>";
       list += "</tr>";
       ++i;
@@ -28,7 +28,9 @@ $(function() {
 
 function kill(id, name) {
   application.dialog.ask("Kill process '" + name + "'", 'Are you sure?', function() {
-    main.apps.close(id);
+    main.get_process(id, function(process) {
+      process.kill();
+    });
   });
 }
 
@@ -37,5 +39,5 @@ function start() {
 }
 
 function end() {
-
+  app.kill();
 }

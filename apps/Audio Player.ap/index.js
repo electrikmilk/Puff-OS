@@ -23,3 +23,7 @@ function load(url) {
     $(".volume").val(audio.element.volume);
   }, 1500);
 }
+
+function end() {
+  app.kill();
+}

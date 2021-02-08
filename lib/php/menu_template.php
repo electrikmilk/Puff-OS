@@ -11,6 +11,10 @@ if(file_exists($manifest)) {
       "About $title"=>array(
         "onClick"=>"apps.about(&quot;$title&quot;)"
       ),
+      "Reload $title"=>array(
+        "onClick"=>"apps.refresh(&quot;$id&quot;,true)",
+        "divider"=>true
+      ),
       "New $title"=>array(
         "onClick"=>"apps.open(&quot;$title&quot;,true)",
         "divider"=>true
@@ -33,7 +37,7 @@ if(file_exists($manifest)) {
           foreach ($items as $label => $opt) {
             unset($onclick,$function);
             $item_label = str_replace("%name",$manifest['name'],$label);
-            if($opt['onClick'])$onclick = "onclick='".str_replace("%name",$manifest['name'],$opt['onClick'])."'";
+            if($opt['onclick'])$onclick = "onclick='".str_replace("%name",$manifest['name'],str_replace("'","&quot;",$opt['onclick']))."'";
             else if($opt['function'])$function = 'data-function="'.$opt['function'].'"';
             echo "<li $onclick $function>$item_label</li>";
             if($opt['divider'])echo "<hr/>";

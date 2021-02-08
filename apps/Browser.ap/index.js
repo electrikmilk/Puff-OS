@@ -25,5 +25,5 @@ function start() {
 }
 
 function end() {
-
+  app.kill();
 }

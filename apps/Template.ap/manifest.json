@@ -1,0 +1,9 @@
+{
+  "name": "Template",
+  "version": "1.0.0"
+  "title": false,
+  "min": false,
+  "close": false,
+  "width": "700px",
+  "height": "550px"
+}
