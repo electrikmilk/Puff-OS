@@ -20,7 +20,7 @@ $(function() {
           list += "<td><input type='range' min='0' max='1' step='0.1' value='" + vol + "' onchange='changeVol(&quot;" + process.id + "&quot;,this.value);'</td>";
           list += "<td>" + process.id + "</td>";
           list += "<td>" + type + "</td>";
-          if (!cantkill.includes(item.name)) list += "<td><button onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
+          if (!cantkill.includes(process.name)) list += "<td><button onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
           else list += "<td></td>";
           list += "</tr>";
           ++i;
