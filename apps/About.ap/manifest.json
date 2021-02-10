@@ -9,5 +9,6 @@
   "height": "230px",
   "x": "30%",
   "y": "30%",
-  "min": false
+  "min": false,
+  "service": true
 }

@@ -1,0 +1,11 @@
+body {}
+.contents {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+  outline: none;
+  z-index: 1;
+}

@@ -6,7 +6,7 @@ if(file_exists($manifest)) {
   $info = json_decode(file_get_contents($manifest),true);
   $title = $info['name'];
   $menus = array();
-  if($info['name'] !== "About")array_push($menus,
+  if(!$info['service'])array_push($menus,
     array("<b>$title</b>"=>array(
       "About $title"=>array(
         "onclick"=>"apps.about(&quot;$title&quot;)"

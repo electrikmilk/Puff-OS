@@ -1,0 +1,8 @@
+{
+  "name": "Calculator",
+  "version": "1.0.0",
+  "about": "Simple calculator app.",
+  "sbin": true,
+  "width": "250px",
+  "height": "253px"
+}

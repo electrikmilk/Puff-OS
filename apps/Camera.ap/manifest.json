@@ -1,0 +1,8 @@
+{
+  "name": "Camera",
+  "version": "1.0.0",
+  "about": "Simple camera app.",
+  "sbin": true,
+  "width": "600px",
+  "height": "400px"
+}

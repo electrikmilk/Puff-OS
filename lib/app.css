@@ -1,6 +1,11 @@
 html {
   background: white;
 }
+.app-toolbar {
+  background: #eee;
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+}
 .dialogs-container {
   background: rgba(150, 150, 150, .5);
   display: none;
@@ -11,6 +16,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 5;
 }
 .dialog {
   display: none;
