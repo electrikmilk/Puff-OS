@@ -3,6 +3,9 @@ $(function() {
   app.log("I'm ready!");
   // Tell the system I'm ready to show my app
   Window.show();
+  Window.dialog.message(false, "Hey there!", function() {
+    app.log("Pressed OK!");
+  });
 });
 
 // This will be called the user clicks the close button on your app

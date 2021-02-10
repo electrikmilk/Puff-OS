@@ -4,6 +4,7 @@ $manifest = "../apps/$app_name.ap/manifest.json";
 if(file_exists($manifest)) {
   $info = json_decode(file_get_contents($manifest),true);
   $title = $info['name'];
+  if($info['title'])$title = $info['title'];
   if(!$info['sbin'])$sandbox = "sandbox='allow-same-origin allow-scripts allow-popups allow-forms'";
   $style = array();
   $style["display"] = "none"; // hide the window initally, this way only shown when ready

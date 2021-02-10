@@ -8,5 +8,5 @@ I just set "index":"index.php" in my manifest.json
   <h3>Template App</h3>
   <p>This is a template app</p>
   <hr/>
-  <button onclick="end()">Close Me</button>
+  <button onclick="close()">Close Me</button>
 </div>
