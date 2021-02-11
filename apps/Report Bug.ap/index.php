@@ -19,14 +19,16 @@ if(!$app_name) {
     <h3><?php echo $manifest['name']; ?></h3>
     <p>Version <?php echo $manifest['version']; ?></p>
     <?php
-    // if($manifest['sbin'])echo "<p><i>This is a system app.</i></p>";
   } else echo "<p>App '$app_name' has not provided or has incorrect syntax in it's manifest.</p>";
 }
 ?>
 </div>
 <hr/>
 <form id="report-form">
-  <textarea placeholder="Please write as many details as you can..." class="stretch" style="height: 150px;"></textarea>
+  <input type="hidden" name="name" value="<?php echo $manifest['name']; ?>"/>
+  <input type="hidden" name="version" value="<?php echo $manifest['version']; ?>"/>
+  <textarea name="message" placeholder="Please write as many details as you can..." class="stretch" style="height: 150px;"></textarea>
+  <p><b>Never</b> include any sensitive information, account details, or possible security vulnerabilities in the field above.</p>
   <div class="dialog-buttons">
     <button type="submit" class="primary">Submit</button>
   </div>

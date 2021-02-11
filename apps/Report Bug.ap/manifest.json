@@ -1,9 +1,9 @@
 {
   "name": "Report Bug",
   "version": "1.0.0",
-  "about": "Report bugs in the system",
+  "about": "Let us know about issues with the system or an app.",
   "index": "index.php",
   "width": "350px",
-  "height": "420px",
+  "height": "480px",
   "sbin": true
 }
