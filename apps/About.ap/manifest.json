@@ -7,8 +7,7 @@
   "sbin": true,
   "width": "230px",
   "height": "230px",
-  "x": "30%",
-  "y": "30%",
+  "center": true,
   "min": false,
   "service": true
 }

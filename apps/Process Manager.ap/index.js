@@ -1,4 +1,4 @@
-var cantkill = ["system", "desktop"];
+var cantkill = ["system", "desktop", "videoAPI", "audioAPI"];
 var keeptrack;
 
 $(function() {
@@ -11,8 +11,11 @@ $(function() {
       else var type = "system";
       if (index.length === 1) index = "0" + i;
       list += "<tr>";
-      if (process.app === true) list += "<td><img src='/apps/" + process.name + ".ap/icon/32.png' width='24'/></td>";
-      else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
+      list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
+      // if (process.app === true) {
+      //   if (exists) list += "<td><img src='/apps/" + process.name + ".ap/icon/32.png' width='24'/></td>";
+      //   else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
+      // } else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
       list += "<td>" + index + "</td>";
       list += "<td>" + process.name + "</td>";
       list += "<td>" + process.id + "</td>";

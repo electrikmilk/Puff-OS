@@ -1,0 +1,14 @@
+{
+  "name": "Dialog",
+  "about": "System dialog service",
+  "title": false,
+  "index": "index.php",
+  "version": "1.0.0",
+  "width": "350px",
+  "height": "180px",
+  "min": false,
+  "close": false,
+  "sbin": true,
+  "service": true,
+  "center": true
+}

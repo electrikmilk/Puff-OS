@@ -8,6 +8,7 @@ $(function() {
 function func(f) {
   if (f === "ac") {
     $(".result").html("0");
+    main.system.cache.set("lastResult", 0);
   } else if (f === "c") {
     if ($(".result").html().length > 1) {
       $(".result").html($(".result").html().slice(0, -1));
@@ -24,6 +25,7 @@ function func(f) {
 function equals() {
   var result = eval($(".result").html());
   $(".result").html(result);
+  main.system.cache.set("lastResult", result);
   app.log(result);
 }
 
@@ -33,6 +35,5 @@ function input(val) {
 }
 
 function close() {
-  main.system.cache.set($(".result").html());
   Window.close();
 }

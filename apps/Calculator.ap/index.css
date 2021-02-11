@@ -1,9 +1,8 @@
-.content {
+body {
   padding: 5px;
-  background: #f5f5f5;
 }
 .result {
-  border: 2px solid #dddddd80;
+  border: 1px solid #ddd;
   padding: 5px;
   font-size: 18px;
   text-align: right;
@@ -17,4 +16,13 @@
 }
 .row.row-3 {
   grid-template-columns: 1fr 1fr 2fr;
+}
+.mediumsymbol {
+  padding: 5px;
+  line-height: 0;
+  font-size: 16px;
+}
+.bigsymbol {
+  line-height: 0;
+  font-size: 20px;
 }

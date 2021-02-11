@@ -12,6 +12,11 @@ if(file_exists($manifest)) {
   if($info['height'])$style["height"] = $info['height'];
   if($info['x'])$style["left"] = $info['x'];
   if($info['y'])$style["top"] = $info['y'];
+  if($info['center']){
+    $style["left"] = "50%";
+    $style["top"] = "50%";
+    $style["transform"] = "translate(-50%, -50%)";
+  }
   foreach($style as $param => $val) {
     $style[$param] = "$param:$val";
   }

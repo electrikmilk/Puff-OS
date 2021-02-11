@@ -27,7 +27,7 @@ if($args[0]) {
   $data = curl_exec($ch);
   curl_close($ch);
   if($data) {
-    $return = "$url returned a response";
+    $return = "$url returned response";
     if($args[1] === "r")$return = $data;
-  } else $return = "$url did not give a response";
-} else $return = "error give url";
+  } else $return = "$url did not return response";
+} else $return = "error no url";
