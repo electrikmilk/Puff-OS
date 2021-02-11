@@ -8,7 +8,7 @@ $(function() {
 function func(f) {
   if (f === "ac") {
     $(".result").html("0");
-    main.system.cache.set("lastResult", 0);
+    main.system.cache.set("lastResult", "0");
   } else if (f === "c") {
     if ($(".result").html().length > 1) {
       $(".result").html($(".result").html().slice(0, -1));

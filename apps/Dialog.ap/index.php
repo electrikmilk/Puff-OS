@@ -14,5 +14,5 @@ if($cancelback)$cancelback = "main.$cancelback";
 <p class="dialog-message"><?php echo $message; ?></p>
 <div class="dialog-buttons">
   <button type="submit" class="primary ok-btn" onclick="<?php echo $callback; ?>"><?php echo $button; ?></button>
-  <?php if($_GET['cancel'] !== "false")echo "<button type='submit' class='cancel-btn' onclick='$cancelback'>$cancel</button>";
+  <?php if($_GET['cancel'] !== "false")echo "<button type='submit' class='cancel-btn' onclick='$cancelback'>$cancel</button>"; ?>
 </div>
