@@ -4,7 +4,8 @@ $filter = array(
   "Process Manager",
   "Calculator",
   "Text Editor",
-  "Report Bug"
+  "Report Bug",
+  "Settings"
 );
 ksort($filter);
 $query = $_POST['query'];

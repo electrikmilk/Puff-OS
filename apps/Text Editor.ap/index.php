@@ -33,4 +33,4 @@ if($file && file_exists($file))$contents = file_get_contents($file);
     ?>
   </select>
 </div>
-<div class="contents" contenteditable="true" style="font-family: Helvetica;font-size: 14;">Type anything...</div>
+<div class="contents" contenteditable="true" style="font-family: Helvetica;font-size: 14;"><?php echo $contents; ?></div>

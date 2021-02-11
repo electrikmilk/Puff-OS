@@ -15,7 +15,7 @@
         "onclick": "apps.open('Process Manager')"
       }
     },
-    "Quick Commands": {
+    "Quick": {
       "Refresh toolbar": {
         "id": "applist"
       },

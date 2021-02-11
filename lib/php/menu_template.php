@@ -4,9 +4,10 @@ $app_name = $_POST['name'];
 $manifest = "../apps/$app_name.ap/manifest.json";
 if(file_exists($manifest)) {
   $info = json_decode(file_get_contents($manifest),true);
+  if($info['service'])return;
   $title = $info['name'];
   $menus = array();
-  if(!$info['service'])array_push($menus,
+  array_push($menus,
     array("<b>$title</b>"=>array(
       "About $title"=>array(
         "onclick"=>"apps.about(&quot;$title&quot;)"

@@ -1,0 +1,9 @@
+{
+  "name": "HTML Editor",
+  "version": "1.0.0",
+  "about": "Simple HTML code editor.",
+  "index": "index.php",
+  "sbin": true,
+  "height": "600px",
+  "width": "900px"
+}

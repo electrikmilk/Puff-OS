@@ -1,7 +1,7 @@
 {
   "name": "Text Editor",
   "version": "1.0.0",
-  "about": "Simple code and text editor.",
+  "about": "Simple text editor.",
   "index": "index.php",
   "sbin": true,
   "height": "400px",
