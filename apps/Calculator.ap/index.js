@@ -2,10 +2,12 @@ var lastResult = main.system.cache.get("lastResult");
 
 $(function() {
   if (lastResult) $(".result").html(lastResult);
-  Window.menu("save", function() {
+  var fileMenu = new Menu("File");
+  fileMenu.divider();
+  fileMenu.add("save", "Save current result", function() {
     main.system.cache.set("lastResult", parseInt($(".result").html()));
   });
-  Window.menu("clear", function() {
+  fileMenu.add("clear", "Clear saved output", function() {
     main.system.cache.set("lastResult", "0");
   });
   Window.show();

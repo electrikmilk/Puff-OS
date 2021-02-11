@@ -28,7 +28,7 @@
       "Clear past output": {
         "id": "clear"
       },
-      "Show all commands": {
+      "Available commands": {
         "id": "help"
       }
     },

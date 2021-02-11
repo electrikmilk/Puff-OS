@@ -3,11 +3,13 @@ $filter = array(
   "Terminal",
   "Process Manager",
   "Calculator",
-  "Text Editor"
+  "Text Editor",
+  "Report Bug"
 );
+ksort($filter);
 $query = $_POST['query'];
 // list of apps...
-$apps = Files::getInstance("../apps")->dir();
+$apps = Files::getInstance("../apps")->dir(null,"az",null,true);
 foreach ($apps as $app) {
   $name = $app['base'];
   $simplename = str_replace(".ap","",$name);

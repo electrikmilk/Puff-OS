@@ -61,7 +61,7 @@ class Files {
             } else return file_get_contents($this->path);
         }
     }
-    public function dir(string $name = null, string $time = null, bool $order = true, int $perm = 0755) {
+    public function dir(string $name = null, string $orderby = "time", string $time = null, bool $order = true, int $perm = 0755) {
         $path = $this->path;
         if ($name) $path = "$path/$name";
         $path .= "/";
@@ -93,7 +93,12 @@ class Files {
                                             $time = filemtime("$path/$entry");
                                     }
                                     $mod = date("Y-m-d H:i:s", $time);
-                                    $files[uniqid()."_".$mod] = $this->info("$entry");
+                                    if($orderby === "time")$files[uniqid()."_".$mod] = $this->info("$entry");
+                                    else if($orderby === "az") $files[$entry] = $this->info("$entry");
+                                    else {
+                                      $info = $this->info("$entry");
+                                      $files[$info['type']] = $info;
+                                    }
                                 }
                             }
                             closedir($handle);

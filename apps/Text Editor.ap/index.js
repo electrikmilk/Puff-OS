@@ -13,7 +13,7 @@ $(function() {
     format('strikeThrough');
   });
   Window.show();
-  $(".contents").click();
+  $(".contents").focus();
 });
 
 function close() {

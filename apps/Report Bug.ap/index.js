@@ -34,6 +34,7 @@ $(function() {
     }
   });
   Window.show();
+  $("textarea").focus();
 });
 
 function close() {
