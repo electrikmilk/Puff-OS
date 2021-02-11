@@ -1,7 +1,9 @@
 $(function() {
-
+  $("#name").html("<b>" + main.osname + "</b>");
+  $("#version").html(main.version + ", build " + main.build);
+  Window.show();
 });
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

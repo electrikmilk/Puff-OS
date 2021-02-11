@@ -46,6 +46,11 @@ hr {
 h1, h2, h3, h4, p {
   margin: 5px 0;
 }
+.stretch {
+  width: 100%;
+  width: fill-availble;
+  width: -webkit-fill-available;
+}
 .tests {
   padding: 20px;
   display: none;
@@ -184,7 +189,7 @@ button.caution:active {
   left: 0;
   right: 0;
   display: grid;
-  grid-template-columns: 0fr 1fr 1fr;
+  grid-template-columns: 0fr 1fr 0.5fr;
   font-size: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }

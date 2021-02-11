@@ -1,4 +1,19 @@
 $(function() {
+  Window.menu("applist", function() {
+    command("app list");
+  });
+  Window.menu("net", function() {
+    command("net");
+  });
+  Window.menu("top", function() {
+    command("top");
+  });
+  Window.menu("clear", function() {
+    command("clear");
+  });
+  Window.menu("help", function() {
+    command("help");
+  });
   $("form#terminal input").focus();
   $("form#terminal").on("submit", function() {
     var command = $("form#terminal input").val();
@@ -45,8 +60,7 @@ $(function() {
     );
   });
   $(".backlog ul").append("<li>Welcome to " + main.osname + "! A web desktop. (" + main.version + ", build " + main.build + ")</li>");
-  $("form#terminal input").val("help");
-  $("form#terminal").submit();
+  command("help");
   Window.show();
 });
 

@@ -15,21 +15,21 @@
         "onclick": "apps.open('Process Manager')"
       }
     },
-    "Commands": {
-      "Refresh Toolbar": {
-        "function": "command('app list')"
+    "Quick Commands": {
+      "Refresh toolbar": {
+        "id": "applist"
       },
       "Check network": {
-        "function": "command('net')"
+        "id": "net"
       },
       "View processes": {
-        "function": "command('top')"
+        "id": "top"
       },
-      "Clear output": {
-        "function": "command('clear')"
+      "Clear past output": {
+        "id": "clear"
       },
-      "Help": {
-        "function": "command('help')"
+      "Show all commands": {
+        "id": "help"
       }
     },
     "Demos": {

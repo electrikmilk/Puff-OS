@@ -5,18 +5,5 @@
   "index": "index.php",
   "sbin": true,
   "height": "400px",
-  "width": "500px",
-  "menus": {
-    "Format": {
-      "Bold": {
-        "id": "bold"
-      },
-      "Italic": {
-        "id": "italic"
-      },
-      "Underline": {
-        "id": "underline"
-      }
-    }
-  }
+  "width": "500px"
 }

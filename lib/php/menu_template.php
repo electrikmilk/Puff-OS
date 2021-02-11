@@ -9,11 +9,11 @@ if(file_exists($manifest)) {
   if(!$info['service'])array_push($menus,
     array("<b>$title</b>"=>array(
       "About $title"=>array(
-        "onclick"=>"apps.about(&quot;$title&quot;)"
+        "onclick"=>"apps.about(&quot;$title&quot;)",
+        "divider"=>true
       ),
       "Reload $title"=>array(
-        "onclick"=>"apps.refresh(&quot;$id&quot;,true)",
-        "divider"=>true
+        "onclick"=>"apps.refresh(&quot;$id&quot;,true)"
       ),
       "New $title"=>array(
         "onclick"=>"apps.open(&quot;$title&quot;,true)",

@@ -2,5 +2,8 @@
   "name": "Report Bug",
   "version": "1.0.0",
   "about": "Report bugs in the system",
+  "index": "index.php",
+  "width": "350px",
+  "height": "420px",
   "sbin": true
 }

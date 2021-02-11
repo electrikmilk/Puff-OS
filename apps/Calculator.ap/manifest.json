@@ -4,5 +4,15 @@
   "about": "Simple calculator app.",
   "sbin": true,
   "width": "250px",
-  "height": "253px"
+  "height": "253px",
+  "menus": {
+    "File": {
+      "Save current result": {
+        "id": "save"
+      },
+      "Clear saved output": {
+        "id": "clear"
+      }
+    }
+  }
 }

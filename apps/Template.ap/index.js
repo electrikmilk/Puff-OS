@@ -6,6 +6,11 @@ $(function() {
   Window.dialog.message(false, "Hey there!", function() {
     app.log("Pressed OK!");
   });
+  Window.menu("menuitem", function() {
+    Window.dialog.message(false, "You clicked the menu item.", function() {
+      app.log("Pressed OK!");
+    });
+  });
 });
 
 // This will be called the user clicks the close button on your app

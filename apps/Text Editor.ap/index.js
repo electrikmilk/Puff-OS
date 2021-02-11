@@ -1,15 +1,19 @@
 $(function() {
-  $(".contents").focus();
-  Window.show();
-  Menu.item("bold", function() {
+  var formatMenu = new Menu("Format");
+  formatMenu.add("bold", "Bold", function() {
     format('bold');
   });
-  Menu.item("italic", function() {
+  formatMenu.add("italic", "Italic", function() {
     format('italic');
   });
-  Menu.item("underline", function() {
+  formatMenu.add("underline", "Underline", function() {
     format('underline');
   });
+  formatMenu.add("strikeThrough", "Strike-through", function() {
+    format('strikeThrough');
+  });
+  Window.show();
+  $(".contents").click();
 });
 
 function close() {

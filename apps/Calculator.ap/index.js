@@ -2,6 +2,12 @@ var lastResult = main.system.cache.get("lastResult");
 
 $(function() {
   if (lastResult) $(".result").html(lastResult);
+  Window.menu("save", function() {
+    main.system.cache.set("lastResult", parseInt($(".result").html()));
+  });
+  Window.menu("clear", function() {
+    main.system.cache.set("lastResult", "0");
+  });
   Window.show();
 });
 

@@ -1,5 +1,12 @@
 {
   "name": "Template",
   "version": "1.0.0",
-  "about": "Basic app to show how easy it is to make an app!"
+  "about": "Basic app to show how easy it is to make an app!",
+  "menus": {
+    "Example": {
+      "Menu Item": {
+        "id": "menuitem"
+      }
+    }
+  }
 }
