@@ -1,6 +1,15 @@
 $(function() {
   $(".contents").focus();
   Window.show();
+  Menu.item("bold", function() {
+    format('bold');
+  });
+  Menu.item("italic", function() {
+    format('italic');
+  });
+  Menu.item("underline", function() {
+    format('underline');
+  });
 });
 
 function close() {

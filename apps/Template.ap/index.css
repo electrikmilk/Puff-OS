@@ -1,8 +1,4 @@
 html, body {
-  padding: 20px;
-  text-align: center;
-}
-.splash {
   display: flex;
   justify-content: center;
   align-items: center;

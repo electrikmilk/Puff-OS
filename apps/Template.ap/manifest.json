@@ -1,10 +1,5 @@
 {
   "name": "Template",
   "version": "1.0.0",
-  "about": "Basic app to show how easy it is to make an app!",
-  "title": false,
-  "min": false,
-  "close": false,
-  "width": "700px",
-  "height": "550px"
+  "about": "Basic app to show how easy it is to make an app!"
 }

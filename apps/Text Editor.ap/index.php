@@ -6,7 +6,7 @@ if($file && file_exists($file))$contents = file_get_contents($file);
   <button type="submit" onclick="format('bold')">B</button>
   <button type="submit" onclick="format('italic')"><i>I</i></button>
   <button type="submit" onclick="format('underline')"><u>U</u></button>
-  <button type="submit" onclick="format('CreateLink')">Link</button>
+  <!-- <button type="submit" onclick="format('CreateLink')">Link</button> -->
   <select onchange="document.execCommand('fontName',false,this.value);">
     <option value="Arial">Arial</option>
     <option value="Helvetica" selected>Helvetica</option>
