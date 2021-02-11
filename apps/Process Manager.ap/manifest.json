@@ -2,6 +2,6 @@
   "name": "Process Manager",
   "title": "Processes",
   "version": "1.0.0",
-  "about": "Basic process management app",
+  "about": "Manage running processes",
   "sbin": true
 }

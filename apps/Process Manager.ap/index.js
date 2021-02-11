@@ -26,7 +26,10 @@ $(function() {
       ++i;
     });
     list += "</tbody></table>";
-    if ($(".output").html() !== list) $(".output").html(list);
+    if ($(".output").html() !== list) {
+      $(".output").html(list);
+      $(".output tbody").selectable();
+    }
   }, 500);
   Window.show();
 });

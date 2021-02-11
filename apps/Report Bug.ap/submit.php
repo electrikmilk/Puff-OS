@@ -1,4 +1,5 @@
 <?php
+// TODO: make this write to a database instead
 require_once "../../lib/apis/application.php";
 $name = $_POST['name'];
 $version = $_POST['version'];

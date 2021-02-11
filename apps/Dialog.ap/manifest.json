@@ -5,7 +5,7 @@
   "index": "index.php",
   "version": "1.0.0",
   "width": "350px",
-  "height": "180px",
+  "height": "170px",
   "min": false,
   "close": false,
   "sbin": true,
