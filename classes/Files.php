@@ -11,7 +11,7 @@ class Files {
             if (!file_exists($path)) throw new Exception("Path '$path' does not appear to exist.");
             if (!is_readable($path)) throw new Exception("Path '$path' does not appear to be readable.");
             if (!is_writeable($path)) trigger_error("Path '$path' appears to be read-only.", E_USER_NOTICE);
-            if(!$absolute)$this->path = "$this->script$path";
+            if($absolute)$this->path = "$this->script$path";
             else $this->path = $path;
         }
         catch(Exception $e) {

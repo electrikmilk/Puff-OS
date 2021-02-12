@@ -322,7 +322,7 @@ button.small {
   width: 600px;
   height: 400px;
   border-radius: 8px;
-  border: 1px solid #efefef;
+  border: 1px solid #ddd;
   box-shadow: 0 0 15px rgba(0, 0, 0, .5);
   display: inline-block;
   overflow: hidden;
@@ -348,13 +348,14 @@ button.small {
   z-index: 0;
 }
 .window-bar {
-  height: 28px;
+  height: 30px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
   background: rgb(231, 231, 231);
-  background: -webkit-linear-gradient(rgba(231, 231, 231, 1) 0%, rgba(181, 181, 181, 1) 100%);
-  background: -o-linear-gradient(rgba(231, 231, 231, 1) 0%, rgba(181, 181, 181, 1) 100%);
-  background: linear-gradient(rgba(231, 231, 231, 1) 0%, rgba(181, 181, 181, 1) 100%);
+  background: -webkit-linear-gradient(rgba(231, 231, 231, .9) 0%, rgba(181, 181, 181, .9) 100%);
+  background: -o-linear-gradient(rgba(231, 231, 231, .9) 0%, rgba(181, 181, 181, .9) 100%);
+  background: linear-gradient(rgba(231, 231, 231, .9) 0%, rgba(181, 181, 181, .9) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: grid;
   grid-template-columns: 0.5fr 1fr 0.5fr;
 }
@@ -375,7 +376,7 @@ button.small {
 }
 .window-title {
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 500;
 }
 .window-title>div {
   display: flex;
@@ -388,7 +389,7 @@ button.small {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: #333;
+  background-color: #141414;
   color: transparent;
   text-shadow: 1px 1px 2px rgb(200 200 200 / 30%);
   -webkit-background-clip: text;

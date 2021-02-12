@@ -30,6 +30,12 @@ $(function() {
   });
 });
 
+function setWP(url) {
+  Window.dialog.ask(false, "Set as your new wallpaper?", function() {
+    main.system.wallpaper.image(url, false);
+  });
+}
+
 function close() {
   Window.close();
 }
