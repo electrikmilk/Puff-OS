@@ -31,24 +31,10 @@ table thead tr {
 table tbody tr:nth-child(odd) {
   background-color: #eee;
 }
-#feedback {
-  font-size: 1.4em;
+.output .ui-selecting {
+  background: rgb(98, 177, 251);
 }
-#selectable .ui-selecting {
-  background: #FECA40;
-}
-#selectable .ui-selected {
-  background: #F39814;
+.output .ui-selected {
+  background: rgb(16, 128, 233);
   color: white;
 }
-#selectable {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 60%;
-}
-#selectable li {
-  margin: 3px;
-  padding: 0.4em;
-  font-size: 1.4em;
-  height: 18px;

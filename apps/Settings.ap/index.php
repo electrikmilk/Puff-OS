@@ -1,1 +1,9 @@
-<p>WIP</p>
+<div class="page">
+  <div class="app-toolbar">
+    <button type="submit" class="back-btn">Back</button>
+  </div>
+  <div class="page-content">
+
+  </div>
+</div>
+<div class="pages"></div>

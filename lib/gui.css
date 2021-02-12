@@ -3,10 +3,10 @@
   cursor: url('/res/cursors/default.png'), auto;
 }
 ::selection {
-  background: rgba(0, 111, 177, .3);
+  background: rgba(16, 128, 233, .3);
 }
 ::-moz-selection {
-  background: rgba(0, 111, 177, .3);
+  background: rgba(16, 128, 233, .3);
 }
 /* Scrollbars */
 ::-webkit-scrollbar {
@@ -158,6 +158,9 @@ button.caution:active {
   background: -webkit-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
   background: -o-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
   background: linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
+}
+button.small {
+  padding: 4px 10px;
 }
 /* Content */
 .boot {
