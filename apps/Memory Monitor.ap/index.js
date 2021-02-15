@@ -4,9 +4,9 @@ var memorycheck;
 $(function() {
   if (performance.memory) {
     getMemory = setInterval(function() {
-      var report = "<div><h3>" + main.memory.limit + "</h3><p>Limit</p></div>";
-      report += "<div><h3>" + main.memory.total + "</h3><p>Total</p></div>";
-      report += "<div><h3>" + main.memory.used + "</h3><p>Used</p></div>";
+      var report = "<div><h3>" + main.memory.limit + "</h3><p>Heap Size Limit</p></div>";
+      report += "<div><h3>" + main.memory.total + "</h3><p>Total Heap Size</p></div>";
+      report += "<div><h3>" + main.memory.used + "</h3><p>Used Heap Size</p></div>";
       $(".stats").html(report);
       $("progress").attr("max", main.systemMemory.totalJSHeapSize).val(main.systemMemory.usedJSHeapSize);
     }, 1000);

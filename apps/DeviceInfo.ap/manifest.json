@@ -1,7 +1,6 @@
 {
   "name": "DeviceInfo",
   "title": false,
-  "min": false,
   "version": "1.0.0",
   "about": "Get details about this device.",
   "width": "490px",
