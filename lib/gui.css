@@ -92,6 +92,7 @@ input:not([type=range], [type=file], [type=checkbox], [type=radio]), textarea, s
   font-size: 14px;
   border: 1px solid #dedede;
   outline: none;
+  moz-appearance: none;
 }
 input:focus, textarea:focus, button:focus, select:focus {
   border-color: #0a89ff;

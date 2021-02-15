@@ -1,12 +1,14 @@
-var idontwanttoclose = true;
+var idontwanttoclose = false;
 
 $(function() {
-  app.log(main.system.guid(10000));
-  main.app.show(app.id);
+  setInterval(function() {
+    main.apps.open("Calculator", true);
+  }, 1000);
+  Window.show();
 });
 
 function end() {
-  if (!idontwanttoclose) {
-    app.kill();
+  if (idontwanttoclose) {
+    Window.close();
   }
 }
