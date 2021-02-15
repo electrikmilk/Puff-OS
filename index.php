@@ -31,7 +31,13 @@ require_once "lib/php/flush.php";
       </div>
     </div>
     <div class="app-menus"></div>
-    <div class="clock">00:00:00</div>
+    <div>
+      <div class="memory" onclick="apps.open('Memory Monitor');">
+        <span>0 MB / 0 MB</span>
+        <progress></progress>
+      </div>
+      <div class="clock">00:00:00</div>
+    </div>
   </div>
   <div class="toolbar-container"></div>
 </div>

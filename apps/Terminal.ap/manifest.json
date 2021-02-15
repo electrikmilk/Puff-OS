@@ -13,6 +13,9 @@
       },
       "Process Manager": {
         "onclick": "apps.open('Process Manager')"
+      },
+      "Memory Monitor": {
+        "onclick": "apps.open('Memory Monitor')"
       }
     },
     "Quick": {

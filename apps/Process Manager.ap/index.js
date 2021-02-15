@@ -1,4 +1,4 @@
-var cantkill = ["system", "desktop", "videoAPI", "audioAPI"];
+var cantkill = ["system", "desktop", "videoAPI", "audioAPI", "memoryMonitor"];
 var keeptrack;
 
 var selected_process;
@@ -23,7 +23,8 @@ $(function() {
       //   else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
       // } else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
       list += "<td>" + index + "</td>";
-      list += "<td>" + process.name + "</td>";
+      if (process.app === true) list += "<td onclick='main.apps.showWindow(&quot;" + process.id + "&quot;);'>" + process.name + "</td>";
+      else list += "<td>" + process.name + "</td>";
       list += "<td>" + process.id + "</td>";
       list += "<td>" + type + "</td>";
       if (!cantkill.includes(process.name)) list += "<td><button class='small' onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";

@@ -1,0 +1,12 @@
+{
+  "name": "DeviceInfo",
+  "title": false,
+  "min": false,
+  "version": "1.0.0",
+  "about": "Get details about this device.",
+  "width": "490px",
+  "height": "500px",
+  "sbin": true,
+  "service": true,
+  "include": ["core-estimator.min.js"]
+}

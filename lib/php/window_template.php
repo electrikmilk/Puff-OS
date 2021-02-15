@@ -7,7 +7,7 @@ if(file_exists($manifest)) {
   if($info['title'])$title = $info['title'];
   if(!$info['sbin'])$sandbox = "sandbox='allow-same-origin allow-scripts allow-popups allow-forms'";
   $style = array();
-  $style["display"] = "none"; // hide the window initally, this way only shown when ready
+  if(!$info['inline'])$style["display"] = "none"; // hide the window initally, this way only shown when ready
   if($info['width'])$style["width"] = $info['width'];
   if($info['height'])$style["height"] = $info['height'];
   if($info['x'])$style["left"] = $info['x'];
@@ -45,7 +45,22 @@ if(file_exists($manifest)) {
         ?>
       </div>
     </div>
-    <div class="window-content"><iframe src="/lib/php/app_template?app=<?php echo $app_name.$data; ?>" <?php echo $sandbox; ?> frameborder=0 allowtransparency></iframe></div>
+    <div class="window-content">
+      <?php
+      if($info['inline'] === true) {
+        if($info['index'])$index = $info['index'];
+        else $index = "index.html";
+        $path = "../../apps/$app.ap/$index";
+        $ext = pathinfo($path,PATHINFO_EXTENSION);
+        if($ext === "php")include_once $path;
+        else echo file_get_contents($path);
+      } else {
+      ?>
+      <iframe src="/lib/php/app_template?app=<?php echo $app_name.$data; ?>" <?php echo $sandbox; ?> frameborder=0 allowtransparency></iframe>
+      <?php
+      }
+      ?>
+    </div>
   </div>
   <?php
 } else return;

@@ -12,6 +12,13 @@ if($info['title'] !== false)$title = $info['name'];
   var appTitle = "<?php echo $info['name']; ?>";
   var appVersion = "<?php echo $info['version']; ?>";
   </script>
+  <?php
+  foreach($info['include'] as $include) {
+    $path = "/apps/$app.ap/";
+    if(stripos($include,"js"))echo "<script type='text/javascript' src='$path$include' defer></script>";
+    else echo "<link rel='stylesheet' href='$path$include'/>";
+  }
+  ?>
 </head>
 <body style="opacity:0;background:black;pointer-events:none;user-select:none;">
   <div class="dialogs-container">
