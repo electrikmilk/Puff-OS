@@ -42,7 +42,7 @@ require_once "lib/php/flush.php";
   <div class="toolbar-container"></div>
 </div>
 <div class="login-container" style="display: none;">
-  <div class="login-window">
+  <!-- <div class="login-window">
     <form id="login-form">
       <h3>Please Login</h3>
       <p>After you login you will be able to access your files, desktop, etc.</p>
@@ -55,7 +55,7 @@ require_once "lib/php/flush.php";
       <button type="submit" class="primary">Login</button>
       <button type="submit" onclick="system.login();">Debug</button>
     </form>
-  </div>
+  </div> -->
 </div>
 <script type="text/javascript" src="lib/init.js" defer></script>
 </body>

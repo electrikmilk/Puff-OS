@@ -1,0 +1,53 @@
+<div class="user-list">
+  <div class="user-item">
+    <div class="user-photo"></div>
+    <div class="user-label">User 1</div>
+  </div>
+  <div class="user-item">
+    <div class="user-photo"></div>
+    <div class="user-label">User 2</div>
+  </div>
+  <div class="user-item">
+    <div class="user-photo"></div>
+    <div class="user-label">User 3</div>
+  </div>
+</div>
+<div class="user-login">
+  <div class="user-photo"></div>
+  <div class="user-label">Username</div>
+  <form>
+    <input type="password" placeholder="Password"/>
+  </form>
+</div>
+<div class="user-setup">
+  <h2>Login to your account</h2><br/>
+  <form>
+    <div><input type="email" placeholder="Email"/></div>
+    <div><input type="password" placeholder="Password"/></div>
+  </form>
+</div>
+<div class="user-register">
+  <div class="app-toolbar">
+    <button type="submit" class="back">Back</button>
+  </div>
+  <br/>
+  <h3>Create new account</h3>
+  <form>
+    <div><input type="text" placeholder="Your Name"/></div>
+    <div><input type="email" placeholder="Email"/></div>
+    <div><input type="password" placeholder="Password"/></div>
+    <div class="dialog-buttons">
+      <button type="submit" class="primary">Create Account</button>
+    </div>
+  </form>
+</div>
+<hr/>
+<div class="login-help">
+  <button type="submit" class="register">Create Account</button>
+  <button type="submit" class="help">I need help</button>
+</div>
+<div class="login-options">
+  <button type="submit" onclick="main.system.refresh();">Reload</button>
+  <button type="submit" class="refresh-login">Refresh Login</button>
+  <button type="submit" class="demo">Demo Mode</button>
+</div>

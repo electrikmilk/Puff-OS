@@ -1,0 +1,12 @@
+{
+  "name": "Login",
+  "version": "1.0.0",
+  "about": "User account login",
+  "index": "index.php",
+  "title": false,
+  "min": false,
+  "close": false,
+  "center": true,
+  "width": "400px",
+  "height": "400px"
+}

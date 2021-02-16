@@ -1,5 +1,6 @@
 html, body {
   background: center / cover no-repeat;
+  height: 100%;
 }
 .in-popup {
   color: white;
@@ -168,20 +169,8 @@ html, body {
   margin: 30px;
 }
 /* Login */
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  width: 100vw;
-}
-.login-window {
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
-}
 /* Windows */
-.windows-container {
+.windows-container, .login-container {
   height: 100vh;
   width: 100vw;
 }

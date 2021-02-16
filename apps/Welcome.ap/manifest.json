@@ -1,0 +1,9 @@
+{
+  "name": "Welcome",
+  "title": "Welcome to Puff OS",
+  "version": "1.0.0",
+  "about": "Simple welcome app",
+  "width": "400px",
+  "height": "350px",
+  "min": false
+}
