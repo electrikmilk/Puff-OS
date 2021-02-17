@@ -4,9 +4,9 @@
   "about": "User account login",
   "index": "index.php",
   "title": false,
-  "min": false,
   "close": false,
   "center": true,
+  "service": true,
   "width": "400px",
   "height": "400px"
 }

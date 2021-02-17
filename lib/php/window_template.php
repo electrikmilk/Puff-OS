@@ -4,7 +4,6 @@ $manifest = "../apps/$app_name.ap/manifest.json";
 if(file_exists($manifest)) {
   $info = json_decode(file_get_contents($manifest),true);
   $title = $info['name'];
-  if($info['title'])$title = $info['title'];
   if(!$info['sbin'])$sandbox = "sandbox='allow-same-origin allow-scripts allow-popups allow-forms'";
   $style = array();
   if(!$info['inline'])$style["display"] = "none"; // hide the window initally, this way only shown when ready
@@ -35,12 +34,15 @@ if(file_exists($manifest)) {
       <div></div>
       <div class="window-title">
         <?php
-        if($info['title'] !== false)echo "<div><img src='$icon' width='20' height='20' class='window-icon'/><div>$title</div></div>";
+        if($info['title'] !== false) {
+          if($info['title'])$title = $info['title'];
+          echo "<div><img src='$icon' width='20' height='20' class='window-icon'/><div>$title</div></div>";
+        }
         ?>
       </div>
       <div>
         <?php
-        if($info['min'] !== false)echo "<div class='window-btn window-min'><span></span></div>";
+        if($info['min'] !== false && $info['service'] !== true)echo "<div class='window-btn window-min'><span></span></div>";
         if($info['close'] !== false)echo "<div class='window-btn window-close'><span></span></div>";
         ?>
       </div>

@@ -1,4 +1,5 @@
 $(function() {
+  $("h3").html("Welcome to " + main.osname + "!");
   Window.show();
 });
 

@@ -6,7 +6,6 @@
   "version": "1.0.0",
   "width": "360px",
   "height": "170px",
-  "min": false,
   "close": false,
   "sbin": true,
   "service": true,

@@ -1,6 +1,4 @@
-var cantkill = ["system", "desktop", "videoAPI", "audioAPI", "memoryMonitor"];
 var keeptrack;
-
 var selected_process;
 var last_processes;
 
@@ -27,7 +25,7 @@ $(function() {
       else list += "<td>" + process.name + "</td>";
       list += "<td>" + process.id + "</td>";
       list += "<td>" + type + "</td>";
-      if (!cantkill.includes(process.name)) list += "<td><button class='small' onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
+      if (!main.cantkill.includes(process.name)) list += "<td><button class='small' onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
       else list += "<td></td>";
       list += "</tr>";
       ++i;

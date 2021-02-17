@@ -1,0 +1,9 @@
+{
+  "name": "Tips",
+  "title": "Tips & Tricks",
+  "version": "1.0.0",
+  "about": "Simple tips app",
+  "width": "400px",
+  "height": "350px",
+  "service": true
+}

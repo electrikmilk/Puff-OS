@@ -1,7 +1,7 @@
 {
-  "name": "HTML Editor",
+  "name": "HTML Playground",
   "version": "1.0.0",
-  "about": "Simple HTML code editor.",
+  "about": "Simple HTML playground.",
   "index": "index.php",
   "sbin": true,
   "height": "600px",
