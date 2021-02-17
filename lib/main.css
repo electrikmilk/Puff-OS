@@ -146,27 +146,29 @@ html, body {
   margin-bottom: 5px;
 }
 .app-item:active {
-  opacity: .5;
+  filter: brightness(70%);
 }
 .app-item.opening {
   opacity: .7;
   pointer-events: none;
   user-select: none;
+  filter: brightness(50%) contrast(150%);
 }
 .app-item.open:after {
-  content: ' ';
+  content: '•';
+  text-align: center;
   display: block;
-  background: #ffffff;
-  opacity: 0.4;
-  border-radius: 50%;
-  padding: 3px;
-  position: relative;
+  color: #333;
+  opacity: 0.7;
+  position: absolute;
+  width: 64px;
   top: 65px;
-  filter: blur(2px);
-  box-shadow: 0 0 20px rgb(255 255 255);
+  font-size: 23px;
 }
 .app-item .loader {
-  margin: 30px;
+  padding: 1px;
+  margin: 28px;
+  filter: brightness(150%);
 }
 /* Login */
 /* Windows */

@@ -4,22 +4,8 @@
   "about": "Basic terminal app",
   "sbin": true,
   "menus": {
-    "Tools": {
-      "Console": {
-        "onclick": "apps.open('Console')"
-      },
-      "Audio Manager": {
-        "onclick": "apps.open('Audio Manager')"
-      },
-      "Process Manager": {
-        "onclick": "apps.open('Process Manager')"
-      },
-      "Memory Monitor": {
-        "onclick": "apps.open('Memory Monitor')"
-      }
-    },
     "Quick": {
-      "Refresh toolbar": {
+      "Refresh taskbar": {
         "id": "applist"
       },
       "Check network": {

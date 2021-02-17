@@ -1,16 +1,16 @@
 $(function() {
-  // var editMenu = new Menu("Edit");
-  // editMenu.add("findreplace", "Find & Replace", function() {
-  //
-  // });
-  // editMenu.add("findfile", "Find in Project", function() {
-  //
-  // });
+  editMenu.divider();
+  editMenu.add("findreplace", "Find...", function() {
+    Window.dialog.input("Find in Playground:", false, function() {
+
+    });
+  });
+  update();
   $("textarea").on("keyup", function() {
     update();
   });
   Window.show();
-  Window.title("test.html");
+  Window.title("New Playground");
   $("textarea").focus();
 });
 

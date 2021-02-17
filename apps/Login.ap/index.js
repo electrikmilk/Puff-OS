@@ -1,6 +1,6 @@
 $(function() {
-  if (main.system.storage.get("session")) {
-    app.log("User is already logged in, closing...");
+  if (main.system.storage.get("session") || main.demo === true) {
+    app.log("logged in, closing...");
     Window.close();
   } else {
     var users = main.system.storage.get("users"); // get previously logged in users

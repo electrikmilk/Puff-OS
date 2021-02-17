@@ -3,35 +3,5 @@
   "version": "1.0.0",
   "about": "Basic files manager",
   "sbin": true,
-  "index": "index.php",
-  "menus": {
-    "File": {
-      "New Folder": {
-        "onClick": ""
-      },
-      "New File": {
-        "onClick": "",
-        "divider": true
-      },
-      "Find...": {
-        "onClick": ""
-      }
-    },
-    "Edit": {
-      "Undo": {
-        "onClick": ""
-      },
-      "Redo": {
-        "onClick": ""
-      }
-    },
-    "View": {
-      "As Icons": {
-        "onClick": ""
-      },
-      "As List": {
-        "onClick": ""
-      }
-    }
-  }
+  "index": "index.php"
 }
