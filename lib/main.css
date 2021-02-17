@@ -230,7 +230,7 @@ html, body {
   background: #dedede;
 }
 .window:not(.ui-selected) .window-title>div>div:last-child {
-  background-color: #888;
+  color: #888;
 }
 .window-title {
   font-size: 15px;
@@ -247,12 +247,8 @@ html, body {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: #141414;
-  color: transparent;
-  text-shadow: 1px 1px 2px rgb(200 200 200 / 30%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
+  color: rgba(0, 0, 0, .8);
+  text-shadow: 0px 1px 1px rgba(255, 255, 255, .6);
 }
 .window-icon {}
 .window-btn {
@@ -266,6 +262,9 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.window-btn:active {
+  filter: brightness(50%);
 }
 .window:not(.ui-selected) .window-bar:not(:hover) .window-btn {
   background: #ccc;
@@ -281,32 +280,21 @@ html, body {
   background: center / contain no-repeat;
 }
 .window-min {
-  background: rgb(255, 218, 198);
-  background: -webkit-linear-gradient(rgba(255, 218, 198, 1) 0%, rgba(182, 70, 0, 1) 100%);
-  background: -o-linear-gradient(rgba(255, 218, 198, 1) 0%, rgba(182, 70, 0, 1) 100%);
-  background: linear-gradient(rgba(255, 218, 198, 1) 0%, rgba(182, 70, 0, 1) 100%);
+  background: rgba(182, 70, 0, 1);
+  background: -webkit-linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
+  background: -o-linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
+  background: linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
   border-color: #873400;
-}
-.window-min:active {
-  background: rgb(182, 70, 0);
-  background: -webkit-linear-gradient(rgba(182, 70, 0, 1) 0%, rgba(255, 218, 198, 1) 100%);
-  background: -o-linear-gradient(rgba(182, 70, 0, 1) 0%, rgba(255, 218, 198, 1) 100%);
-  background: linear-gradient(rgba(182, 70, 0, 1) 0%, rgba(255, 218, 198, 1) 100%);
 }
 .window-min span {
   background-image: url(/res/icons/min.svg);
 }
 .window-close {
-  background: rgb(249, 172, 172);
-  background: -webkit-linear-gradient(rgba(249, 172, 172, 1) 0%, rgba(176, 0, 0, 1) 100%);
-  background: -o-linear-gradient(rgba(249, 172, 172, 1) 0%, rgba(176, 0, 0, 1) 100%);
-  background: linear-gradient(rgba(249, 172, 172, 1) 0%, rgba(176, 0, 0, 1) 100%);
+  background: rgb(182, 2, 0);
+  background: -webkit-linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
+  background: -o-linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
+  background: linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
   border-color: #7a0000;
-}
-.window-close:active {
-  background: -webkit-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
-  background: -o-linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
-  background: linear-gradient(rgba(176, 0, 0, 1) 0%, rgba(249, 172, 172, 1) 100%);
 }
 .window-close span {
   background-image: url(/res/icons/close.svg);
