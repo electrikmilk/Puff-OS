@@ -2,10 +2,9 @@
   "name": "Welcome",
   "title": false,
   "version": "1.0.0",
-  "about": "Simple welcome app",
+  "about": "Startup welcome app",
   "width": "400px",
-  "height": "230px",
-  "x": "20%",
-  "y": "20%",
+  "height": "350px",
+  "center": true,
   "service": true
 }

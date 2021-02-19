@@ -15,11 +15,11 @@ require_once "lib/php/flush.php";
 <div class="system-audio"></div>
 
 <div class="in-popup">
-  <!-- <button>Open Puff OS</button> -->
+  <button onclick="openWindow();">Open Puff OS</button>
   <p>Nothing happening? Allow popups.</p>
 </div>
 
-<div class="boot"><div class='loader'></div></div>
+<div class="boot" style='text-align: center;'><img class="reaction" width="60"/><p style="color:white;"></p></div>
 <div class="desktop-container" style="display: none;">
   <div class="dialogs-container"></div>
   <div class="windows-container"></div>
