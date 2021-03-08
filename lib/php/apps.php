@@ -23,18 +23,24 @@ $apps = array(
 //   }
 // }
 
-if($query) {
-  $name = $query;
-  $icon = "/apps/".str_replace(" ","\ ",$name).".ap/icon/64.png";
-  if(!file_exists("../apps/$name.ap/icon/64.png"))$icon = "/res/icons/app.svg";
-  $info = json_decode(file_get_contents("../apps/$name.ap/manifest.json"),true);
-  if($info['service'])return;
-  echo "<div class='app-item opening' id='".uniqid()."' tooltip='{$info['name']}' onclick='apps.show(&quot;$name&quot;),apps.open(&quot;$name&quot;);' style='background-image:url($icon);'><div class='loader'></div></div>";
+if ($query) {
+    $name = $query;
+    $icon = "/apps/".str_replace(" ", "\ ", $name).".ap/icon/64.png";
+    if (!file_exists("../apps/$name.ap/icon/64.png")) {
+        $icon = "/res/icons/app.svg";
+    }
+    $info = json_decode(file_get_contents("../apps/$name.ap/manifest.json"), true);
+    if ($info['service']) {
+        return;
+    }
+    echo "<div class='app-item opening' id='".uniqid()."' tooltip='{$info['name']}' onclick='apps.show(&quot;$name&quot;),apps.open(&quot;$name&quot;);' style='background-image:url($icon);'><div class='loader'></div></div>";
 } else {
-  foreach ($apps as $name) {
-    $icon = "/apps/".str_replace(" ","\ ",$name).".ap/icon/64.png";
-    if(!file_exists("../apps/$name.ap/icon/64.png"))$icon = "/res/icons/app.svg";
-    $info = json_decode(file_get_contents("../apps/$name.ap/manifest.json"),true);
-    echo "<div class='app-item' id='".uniqid()."' tooltip='{$info['name']}' onclick='apps.show(&quot;$name&quot;),apps.open(&quot;$name&quot;);' style='background-image:url($icon);'></div>";
-  }
+    foreach ($apps as $name) {
+        $icon = "/apps/".str_replace(" ", "\ ", $name).".ap/icon/64.png";
+        if (!file_exists("../apps/$name.ap/icon/64.png")) {
+            $icon = "/res/icons/app.svg";
+        }
+        $info = json_decode(file_get_contents("../apps/$name.ap/manifest.json"), true);
+        echo "<div class='app-item' id='".uniqid()."' tooltip='{$info['name']}' onclick='apps.show(&quot;$name&quot;),apps.open(&quot;$name&quot;);' style='background-image:url($icon);'></div>";
+    }
 }

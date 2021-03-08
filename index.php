@@ -39,7 +39,9 @@ require_once "lib/php/flush.php";
       <div class="clock">00:00:00</div>
     </div>
   </div>
-  <div class="toolbar-container"></div>
+  <div class="toolbar-container">
+    <div class="toolbar"></div>
+  </div>
 </div>
 <div class="login-container" style="display: none;">
   <!-- <div class="login-window">
