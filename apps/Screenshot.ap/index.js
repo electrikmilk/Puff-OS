@@ -1,5 +1,6 @@
 $(function() {
   screenshot();
+  Window.show();
 });
 
 function screenshot() {
@@ -8,6 +9,6 @@ function screenshot() {
   });
 }
 
-function end() {
-  app.kill();
+function close() {
+  Window.close();
 }

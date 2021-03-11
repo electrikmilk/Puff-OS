@@ -136,20 +136,12 @@ html, body {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  bottom: -50px;
-}
-.toolbar-container.open {
-  bottom: 0;
 }
 .toolbar {
   border-radius: 10px;
   border-top: 1px solid #888;
   box-shadow: 0 0 15px rgba(0, 0, 0, .4);
   transition: all 0.3s ease-in-out;
-}
-.toolbar:hover {
-  opacity: 1;
-  margin-left: 0;
 }
 .app-item {
   margin: 5px;

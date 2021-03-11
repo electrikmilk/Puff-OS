@@ -1,7 +1,9 @@
 <?php
 $app = $_REQUEST['app'];
-$info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"),true);
-if($info['title'] !== false)$title = $info['name'];
+$info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), true);
+if ($info['title'] !== false) {
+    $title = $info['name'];
+}
 ?>
 <!doctype html>
 <html>
@@ -13,10 +15,13 @@ if($info['title'] !== false)$title = $info['name'];
   var appVersion = "<?php echo $info['version']; ?>";
   </script>
   <?php
-  foreach($info['include'] as $include) {
-    $path = "/apps/$app.ap/";
-    if(stripos($include,"js"))echo "<script type='text/javascript' src='$path$include' defer></script>";
-    else echo "<link rel='stylesheet' href='$path$include'/>";
+  foreach ($info['include'] as $include) {
+      $path = "/apps/$app.ap/";
+      if (stripos($include, "js")) {
+          echo "<script type='text/javascript' src='$path$include' defer></script>";
+      } else {
+          echo "<link rel='stylesheet' href='$path$include'/>";
+      }
   }
   ?>
 </head>
@@ -37,17 +42,25 @@ if($info['title'] !== false)$title = $info['name'];
     </div>
   </div>
   <?php
-  if($info['index'])$index = $info['index'];
-  else $index = "index.html";
+  if ($info['index']) {
+      $index = $info['index'];
+  } else {
+      $index = "index.html";
+  }
   $path = "../../apps/$app.ap/$index";
-  if(file_exists($path)) {
-    $ext = pathinfo($path,PATHINFO_EXTENSION);
-    if($ext === "php")include_once $path;
-    else echo file_get_contents($path);
-  } else echo "<script>
+  if (file_exists($path)) {
+      $ext = pathinfo($path, PATHINFO_EXTENSION);
+      if ($ext === "php") {
+          include_once $path;
+      } else {
+          echo file_get_contents($path);
+      }
+  } else {
+      echo "<script>
   parent.desktop.log('$app.ap DOM not found! Closing...','warn');
   // apps.close('$app');
   </script>";
+  }
   ?>
 </body>
 </html>
