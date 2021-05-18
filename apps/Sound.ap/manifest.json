@@ -1,0 +1,15 @@
+{
+  "name": "Sound",
+  "version": "1.0.0",
+  "about": "Audio process manager",
+  "sbin": true,
+  "service": true,
+  "import": [
+    "applet"
+  ],
+  "applet": {
+    "type": "popup",
+    "width": "400px",
+    "height": "150px"
+  }
+}

@@ -32,5 +32,8 @@
         "onclick": "apps.open('UI Gallery')"
       }
     }
-  }
+  },
+  "import": [
+    "menu"
+  ]
 }

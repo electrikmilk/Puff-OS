@@ -15,6 +15,8 @@ $(function() {
 
 // This will be called the user clicks the close button on your app
 function close() {
-  // Wrap up anything the app is doing
+  // Wrap up anything the app is doing...
+
+  // Stop your app
   Window.close();
 }

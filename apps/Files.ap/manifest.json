@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "about": "Basic files manager",
   "sbin": true,
-  "index": "index.php"
+  "index": "index.php",
+  "import": [
+    "menu"
+  ]
 }

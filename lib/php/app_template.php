@@ -11,8 +11,7 @@ if ($info['title'] !== false) {
   <title><?php echo $title; ?></title>
   <script type="text/javascript" src="/lib/apis/app.js"></script>
   <script>
-  var appTitle = "<?php echo $info['name']; ?>";
-  var appVersion = "<?php echo $info['version']; ?>";
+  var manifest = <?php echo json_encode(json_decode(file_get_contents("../../apps/$app.ap/manifest.json"))); ?>;
   </script>
   <?php
   foreach ($info['include'] as $include) {

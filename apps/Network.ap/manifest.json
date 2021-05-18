@@ -1,0 +1,12 @@
+{
+  "name": "Network",
+  "version": "1.0.0",
+  "about": "Network status monitor",
+  "sbin": true,
+  "service": true,
+  "applet": {
+    "type": "popup",
+    "width": "250px",
+    "height": "80px"
+  }
+}

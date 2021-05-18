@@ -5,5 +5,8 @@
   "index": "index.php",
   "sbin": true,
   "height": "400px",
-  "width": "500px"
+  "width": "500px",
+  "import": [
+    "menu"
+  ]
 }

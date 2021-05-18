@@ -3,5 +3,8 @@
   "title": "Processes",
   "version": "1.0.0",
   "about": "Manage running processes",
-  "sbin": true
+  "sbin": true,
+  "import": [
+    "menu"
+  ]
 }

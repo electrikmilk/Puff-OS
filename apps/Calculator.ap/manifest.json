@@ -4,5 +4,15 @@
   "about": "Simple calculator app.",
   "sbin": true,
   "width": "250px",
-  "height": "253px"
+  "height": "253px",
+  "import": [
+    "menu",
+    "applet"
+  ],
+  "applet": {
+    "type": "popup",
+    "width": "230px",
+    "height": "190px",
+    "icon": "calc.png"
+  }
 }

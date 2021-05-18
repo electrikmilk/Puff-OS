@@ -126,6 +126,55 @@ html, body {
 .clock {
   text-align: right;
 }
+.applet.popup {
+  height: 37px;
+  width: 35px;
+  margin-bottom: -14px;
+}
+.applet.popup span {
+  background: center/ contain no-repeat;
+  display: block;
+  padding: 10px;
+  margin-top: 8px;
+}
+.applet.popup:hover {
+  background: rgb(98, 177, 251);
+  background: -webkit-linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+  background: -o-linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+  background: linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%);
+}
+.applet.popup:hover>span {
+  filter: invert();
+}
+.applet.popup:hover>.popup-menu {
+  display: block;
+}
+.applet .popup-menu {
+  background: #fff;
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  width: 300px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgb(231, 231, 231);
+  background: -webkit-linear-gradient(rgba(231, 231, 231, .7) 0%, rgba(181, 181, 181, .7) 100%);
+  background: -o-linear-gradient(rgba(231, 231, 231, .7) 0%, rgba(181, 181, 181, .7) 100%);
+  background: linear-gradient(rgba(231, 231, 231, .7) 0%, rgba(181, 181, 181, .7) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  display: none;
+}
+.applet:not(.popup) iframe {
+  height: 30px;
+  margin: -9px 0;
+  width: 200px;
+}
+.applet.popup iframe {
+  width: 100%;
+  height: 100%;
+}
 /* Toolbar */
 .toolbar-container {
   position: fixed;
