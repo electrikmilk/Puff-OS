@@ -269,7 +269,7 @@ html, body {
 .window-icon {}
 .window-btn {
   padding: 3px;
-  border-radius: 50%;
+  border-radius: 5px;
   float: right;
   border: 0.5px solid #eee;
   user-select: none;
@@ -300,7 +300,7 @@ html, body {
   background: -webkit-linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
   background: -o-linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
   background: linear-gradient(rgb(255, 240, 229), rgba(218, 85, 1, 1), rgba(255, 172, 128, 1));
-  border-color: #873400;
+  border-color: #a03f01;
 }
 .window-min span {
   background-image: url(/res/icons/min.svg);
@@ -310,7 +310,7 @@ html, body {
   background: -webkit-linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
   background: -o-linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
   background: linear-gradient(rgba(255, 221, 221, 1), rgb(182, 2, 0), rgba(255, 129, 129, 1));
-  border-color: #7a0000;
+  border-color: #a70000;
 }
 .window-close span {
   background-image: url(/res/icons/close.svg);
