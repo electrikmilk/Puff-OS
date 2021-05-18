@@ -1,13 +1,17 @@
 var audio;
 
 $(function() {
-  audio = main.apps.audio(app);
-  if (file) load(file);
+  if (file) {
+    if (type === "audio") {
+      audio = main.apps.audio(app);
+      loadAudio(file);
+    }
+  }
   Window.show();
   Window.title(file.replace("../../", ""));
 });
 
-function load(url) {
+function loadAudio(url) {
   audio.set([url]);
   $(".play").on("click", function() {
     audio.element.play();
