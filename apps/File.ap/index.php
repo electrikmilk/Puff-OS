@@ -28,9 +28,9 @@ if (in_array($ext, $audio)) {
     } elseif (in_array($ext, $image)) {
         ?>
       <script>
-      var type = "audio";
+      var type = "image";
       </script>
-      <div class='image' style='background-image:url(<?php echo $path; ?>);'></div>
+      <div class="image" style="background-image:url(<?php echo $path; ?>);"></div>
       <?php
     } elseif (in_array($ext, $video)) {
         ?>
