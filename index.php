@@ -19,6 +19,8 @@ require_once "lib/php/flush.php";
   <p>Nothing happening? Allow popups.</p>
 </div>
 
+<div class="screenshot"></div>
+
 <div class="boot" style='text-align: center;'><img class="reaction" width="60"/><p style="color:white;"></p></div>
 <div class="desktop-container" style="display: none;">
   <div class="dialogs-container"></div>
