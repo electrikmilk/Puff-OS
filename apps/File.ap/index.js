@@ -4,6 +4,7 @@ $(function() {
   audio = main.apps.audio(app);
   if (file) load(file);
   Window.show();
+  Window.title(file.replace("../../", ""));
 });
 
 function load(url) {

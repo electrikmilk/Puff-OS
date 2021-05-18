@@ -1,0 +1,9 @@
+{
+  "name": "File",
+  "version": "1.0.0",
+  "about": "Preview files",
+  "index": "index.php",
+  "sbin": true,
+  "service": true,
+  "width": "500px"
+}
