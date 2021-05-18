@@ -1,0 +1,40 @@
+html, body {
+  line-height: 1.4;
+  font-size: 15px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table thead th {
+  padding: 3px 5px;
+  border-right: 1px solid #ddd;
+}
+table tbody td {
+  padding: 5px;
+}
+table tr td:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+table thead th {
+  font-weight: bold;
+  text-align: left;
+}
+table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+table thead tr {
+  border-bottom: 1px solid #ddd;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #eee;
+}
+.output .ui-selecting {
+  background: rgb(98, 177, 251);
+}
+.output .ui-selected {
+  background: rgb(16, 128, 233);
+  color: white;
+}
