@@ -177,8 +177,8 @@ html, body {
   display: none;
 }
 .applet:not(.popup) iframe {
-  height: 30px;
-  margin: -9px 0;
+  height: 37px;
+  margin-bottom: -14px;
   width: 200px;
 }
 .applet.popup iframe {

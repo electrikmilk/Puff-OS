@@ -1,10 +1,13 @@
 {
   "name": "Process Manager",
-  "title": "Processes",
-  "version": "1.0.0",
-  "about": "Manage running processes",
+  "version": "1.1.0",
+  "about": "Manage running processes and monitor memory usage",
   "sbin": true,
   "import": [
-    "menu"
-  ]
+    "menu",
+    "applet"
+  ],
+  "applet": {
+    "width": "280px"
+  }
 }

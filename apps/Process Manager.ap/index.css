@@ -31,10 +31,28 @@ table thead tr {
 table tbody tr:nth-child(odd) {
   background-color: #eee;
 }
+.memory {
+  margin-top: 8px;
+}
+.output {
+  height: 265px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+}
 .output .ui-selecting {
   background: rgb(98, 177, 251);
 }
 .output .ui-selected {
   background: rgb(16, 128, 233);
   color: white;
+}
+.memorymonitor {
+  margin: 10px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.stats div p {
+  opacity: .7;
 }
