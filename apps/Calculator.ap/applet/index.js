@@ -1,17 +1,5 @@
 var lastResult = main.system.cache.get("lastResult");
 
-$(function() {
-  if (lastResult) $(".result").html(lastResult);
-  var outputMenu = new Menu("Output");
-  outputMenu.add("save", "Save current result", function() {
-    main.system.cache.set("lastResult", parseInt($(".result").html()));
-  });
-  outputMenu.add("clear", "Clear current saved result", function() {
-    main.system.cache.set("lastResult", "0");
-  });
-  Window.show();
-});
-
 function func(f) {
   if (f === "ac") {
     $(".result").html("0");
@@ -39,8 +27,4 @@ function equals() {
 function input(val) {
   if ($(".result").text() === "0") $(".result").html("");
   $(".result").append(val);
-}
-
-function close() {
-  Window.close();
 }
