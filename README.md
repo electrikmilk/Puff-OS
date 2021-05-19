@@ -39,7 +39,7 @@ I try my best to do these monthly or every few months when changes are significa
 
 ### May 19 screenshot
 
-![Desktop Screenshot](https://i.imgur.com/mrQZCJF.png)
+![Desktop Screenshot](https://i.imgur.com/wnRr2Xe.png)
 
 ### Feb. 12 screenshot
 
