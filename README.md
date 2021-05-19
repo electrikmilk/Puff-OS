@@ -37,11 +37,14 @@ It has a UI inspired by modern UIs like iPad OS & macOS Big Sur, but also by old
 
 I try my best to do these monthly or every few months when changes are significant enough.
 
-May 19 screenshot
+### May 19 screenshot
+
 ![Desktop Screenshot](https://i.imgur.com/mrQZCJF.png)
 
-Feb. 12 screenshot
+### Feb. 12 screenshot
+
 ![Desktop Screenshot](https://i.imgur.com/N1d0660.jpg)
 
-Jan. 29 screenshot
+### Jan. 29 screenshot
+
 ![Desktop Screenshot](https://i.imgur.com/MrC3A0Y.jpg)
