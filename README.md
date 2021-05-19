@@ -33,7 +33,7 @@ I've worked on web desktops in the past but never in a serious capacity like thi
 
 It has a UI inspired by modern UIs like iPad OS & macOS Big Sur, but also by old versions of OS X and the Ambience theme from GNOME 2 in Ubuntu as those are UIs I grew up admiring.
 
-## Early development screenshots:
+## Early development screenshots
 
 I try my best to do these monthly or every few months when changes are significant enough.
 
