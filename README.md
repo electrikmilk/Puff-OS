@@ -8,6 +8,9 @@ This project is a WIP, so most of the apis and applications are still being work
 
 It has a UI inspired by modern UIs like iOS 14 & Big Sur, but also by old versions of OS X and the Ambience theme from GNOME 2 in Ubuntu. I wanted to create a modern version of the UIs I grew up admiring.
 
+May 19 screenshot
+![Desktop Screenshot](https://i.imgur.com/mrQZCJF.png)
+
 Feb. 12 screenshot
 ![Desktop Screenshot](https://i.imgur.com/N1d0660.jpg)
 
