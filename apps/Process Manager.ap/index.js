@@ -15,18 +15,23 @@ $(function() {
     var list = "<table><thead><th></th><th>#</th><th>process</th><th>id</th><th>type</th><th></th></thead><tbody>";
     main.processes.forEach(function(process) {
       index = i.toString();
-      if (process.app === true) var type = "app";
-      else var type = "system";
+      if (process.app === true) var type = "App";
+      else if (process.applet === true) var type = "Applet";
+      else var type = "System";
       if (index.length === 1) index = "0" + i;
-      list += "<tr data-id='" + process.id + "' data-name='" + process.name + "'>";
-      list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
-      // if (process.app === true) {
-      //   if (exists) list += "<td><img src='/apps/" + process.name + ".ap/icon/32.png' width='24'/></td>";
-      //   else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
-      // } else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
+      var name = process.name;
+      var notres = "";
+      if (main.unresponsive.includes(process)) {
+        name += " (unresponsive)";
+        var notres = "style='background:#ff000030;'";
+      }
+      list += "<tr data-id='" + process.id + "' data-name='" + process.name + "' " + notres + ">";
+      // list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
+      if (process.app === true) list += "<td><img src='/apps/" + process.name + ".ap/icon/32.png' width='24'/></td>";
+      else list += "<td><img src='/res/icons/app.svg' width='24'/></td>";
       list += "<td>" + index + "</td>";
-      if (process.app === true) list += "<td onclick='main.apps.showWindow(&quot;" + process.id + "&quot;);'>" + process.name + "</td>";
-      else list += "<td>" + process.name + "</td>";
+      if (process.app === true) list += "<td onclick='main.apps.showWindow(&quot;" + process.id + "&quot;);'>" + name + "</td>";
+      else list += "<td>" + name + "</td>";
       list += "<td>" + process.id + "</td>";
       list += "<td>" + type + "</td>";
       if (!main.cantkill.includes(process.name)) list += "<td><button class='small' onclick='kill(&quot;" + process.id + "&quot;,&quot;" + process.name + "&quot;);'>Kill</button></td>";
@@ -67,7 +72,8 @@ $(function() {
       report += "<div><h3>" + memory.total + "</h3><p>Total Heap Size</p></div>";
       report += "<div><h3>" + memory.used + "</h3><p>Used Heap Size</p></div>";
       $(".stats").html(report);
-      $("progress").attr("max", main.systemMemory.totalJSHeapSize).val(main.systemMemory.usedJSHeapSize);
+      $("progress#alloc").attr("max", main.systemMemory.totalJSHeapSize).val(main.systemMemory.usedJSHeapSize);
+      $("progress#limit").attr("max", main.systemMemory.jsHeapSizeLimit).val(main.systemMemory.totalJSHeapSize);
     }, 1000);
   } else {
     $(".memorymonitor").remove();

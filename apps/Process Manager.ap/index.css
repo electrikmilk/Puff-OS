@@ -35,7 +35,7 @@ table tbody tr:nth-child(odd) {
   margin-top: 8px;
 }
 .output {
-  height: 265px;
+  height: 230px;
   overflow-y: auto;
   border-bottom: 1px solid #ddd;
 }
