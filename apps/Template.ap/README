@@ -1,1 +1,16 @@
-You must create a index.js, index.css, and manifest.json files.
+Make your own Puff OS app
+----
+Basic App:
+Create an app folder with the full name of your application. It must end in ".ap".
+You must create a index.js, index.css, index.html and manifest.json files in your app folder. Use the existing ones as examples.
+
+Menubar Menus:
+Define your menus in your index.js or manifest.json files. Add "menu" to the import property in your manifest.json file.
+
+Applet:
+Create an /applet/ folder in your app folder. Add an index.html and index.js file. Add "applet" to the import property in your manifest.json file.
+Set applet properties using the example in the mainfest.json file.
+
+Icon:
+Create 16, 32, 64, 128, and 512px versions of your icon and put them in an /icon/ folder in your app folder.
+----

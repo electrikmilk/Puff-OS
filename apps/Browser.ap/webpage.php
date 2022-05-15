@@ -31,7 +31,7 @@ define('VERSION','1.0');
 // $agent = "Mozilla/5.0 (Linux; Android 4.4; Nexus 5 Build/BuildID) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36";
 // make agent
 $split = explode(")",$_SERVER['HTTP_USER_AGENT']);
-$agent = "Mozilla/5.0 (compatible; Puff OS Browser/" . VERSION . ", https://puff.com)";
+$agent = "Mozilla/5.0 (compatible; Puff OS/" . VERSION . ")";
 $i = 0;
 foreach($split as $part) {
   if($i !== 0) {

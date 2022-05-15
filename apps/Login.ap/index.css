@@ -1,56 +1,66 @@
 html, body {
-  font-size: 14px;
+	font-size: 14px;
 }
+
 .user-login, .user-list, .user-setup {
-  display: none;
-  margin: 35px;
+	display: none;
+	margin: 35px;
 }
+
 .user-register {
-  display: none;
+	display: none;
 }
+
 .user-list {
-  margin: 25px 0;
-  grid-auto-flow: column;
+	margin: 25px 0;
+	grid-auto-flow: column;
 }
+
 .user-login, .user-setup, .login-help {
-  text-align: center;
+	text-align: center;
 }
+
 .user-item {
-  padding: 10px 0;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  transition: 0.2s all;
-  text-align: center;
+	padding: 10px 0;
+	border-radius: 5px;
+	border: 1px solid transparent;
+	transition: 0.2s all;
+	text-align: center;
 }
+
 .user-list .user-item:hover {
-  background: rgba(0, 0, 0, .2);
-  border-color: #ddd;
+	background: rgba(0, 0, 0, .2);
+	border-color: #dddddd;
 }
+
 .user-photo {
-  display: inline-block;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background: #fefefe url(/res/user.png) center / cover no-repeat;
-  border-radius: 1px solid #ddd;
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	background: #fefefe url(/res/user.png) center / cover no-repeat;
+	border-radius: 1px solid #dddddd;
 }
+
 .user-item .user-label {
-  margin-top: 5px;
-  font-size: 16px;
-  font-weight: 500;
+	margin-top: 5px;
+	font-size: 16px;
+	font-weight: 500;
 }
+
 .login-options {
-  border-top: 1px solid #ddd;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  background: rgba(255, 255, 255, .3);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+	border-top: 1px solid #dddddd;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 10px;
+	background: rgba(255, 255, 255, .3);
+	backdrop-filter: blur(30px);
+	-webkit-backdrop-filter: blur(30px);
 }
+
 input[type=password] {
-  margin: 10px 0;
+	margin: 10px 0;
 }

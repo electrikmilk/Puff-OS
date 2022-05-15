@@ -2,7 +2,6 @@
   "name": "Login",
   "version": "1.0.0",
   "about": "User account login",
-  "index": "index.php",
   "title": false,
   "close": false,
   "center": true,

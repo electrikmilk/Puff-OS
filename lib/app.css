@@ -1,44 +1,50 @@
 body {
-  background: white;
+	background: white;
 }
+
 .app-toolbar {
-  background: #eee;
-  border-bottom: 1px solid #ddd;
-  padding: 5px;
+	background: #eeeeee;
+	border-bottom: 1px solid #dddddd;
+	padding: 5px;
 }
+
 .dialogs-container {
-  background: rgba(150, 150, 150, .5);
-  display: none;
-  justify-content: center;
-  align-items: flex-start;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 5;
+	background: rgba(150, 150, 150, .5);
+	display: none;
+	justify-content: center;
+	align-items: flex-start;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 5;
 }
+
 .dialog {
-  display: none;
-  border: 2px solid #efefef;
-  background-color: white;
-  padding: 15px;
-  border-radius: 0 0 10px 10px;
-  min-width: 300px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+	display: none;
+	border: 2px solid #efefef;
+	background-color: white;
+	padding: 15px;
+	border-radius: 0 0 10px 10px;
+	min-width: 300px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .3);
 }
+
 .dialog-input {
-  display: none;
-  padding-top: 15px;
+	display: none;
+	padding-top: 15px;
 }
+
 .dialog-input input {
-  width: 100%;
-  width: -webkit-fill-available;
-  width: fill-available
+	width: 100%;
+	width: -webkit-fill-available;
+	width: fill-available
 }
+
 .dialog-buttons {
-  margin-top: 15px;
-  column-gap: 10px;
-  display: flex;
-  justify-content: flex-end;
+	margin-top: 15px;
+	column-gap: 10px;
+	display: flex;
+	justify-content: flex-end;
 }

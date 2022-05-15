@@ -14,6 +14,8 @@
     "applet"
   ],
   "applet": {
-    "type": "popup"
+    "type": "popup",
+    "width": "400px",
+    "height": "150px"
   }
 }
