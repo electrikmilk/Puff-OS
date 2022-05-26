@@ -1,6 +1,6 @@
 <hr/>
 <?php
-$apps = Files::getInstance("../apps")->dir();
+$apps = Files::dir("../apps");
 foreach ($apps as $app) {
 	$name = $app['base'];
 	$simplename = str_replace(".ap", "", $name);
