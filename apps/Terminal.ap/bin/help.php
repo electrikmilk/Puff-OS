@@ -1,12 +1,13 @@
 <?php
-$dontstrip = true;
-$files = Files::getInstance("bin");
-$return .= "\n";
+$escape = false;
+$files = Files::dir("bin");
+$return = "\n";
 $commands = array();
-foreach ($files->dir() as $command) {
-	array_push($commands, $command['name']);
+foreach ($files as $file) {
+	$commands[] = $file['filename'];
 }
 asort($commands);
+$list = "";
 foreach ($commands as $command) {
 	$list .= "<div>$command</div>";
 }
