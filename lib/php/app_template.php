@@ -1,4 +1,5 @@
 <?php
+require_once '../../globals.php';
 $app = $_REQUEST['app'];
 $info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), true);
 if ($info['title'] !== false) {

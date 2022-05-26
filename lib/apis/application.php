@@ -1,5 +1,5 @@
 <?php
-$GLOBALS['Application'] = end(explode("/", __DIR__));
+define('APP', end(explode("/", __DIR__)));
 // Autoload App Classes
 $classes = array("Cache", "Files", "Cookie");
 spl_autoload_register(function ($className) {
