@@ -34,11 +34,13 @@ $(function () {
 		$('form#terminal input').prop('disabled', true);
 		$('form#terminal').hide();
 		Window.title(command);
-		main.network.request('/apps/Terminal.ap/shell', 'POST', {
+		main.network.newRequest({
+			url: '/apps/Terminal.ap/shell',
+			data: {
 				command: command,
 				session: session
 			},
-			function (response) {
+			success: function (response) {
 				$('form#terminal');
 				$('form#terminal input').prop('disabled', false);
 				$('form#terminal').show();
@@ -53,7 +55,7 @@ $(function () {
 				$('html, body').scrollTop($(document).height());
 				$('form#terminal input').focus();
 			},
-			function (error) {
+			error: function (error) {
 				$('form#terminal input').prop('disabled', false);
 				$('form#terminal').show();
 				Window.title(command + ' failed!');
@@ -61,7 +63,7 @@ $(function () {
 				$('.backlog ul').append('<li class=\'response\' id=\'error\'>failed to run \'' + command + '\'</li>');
 				$('form#terminal input').focus();
 			}
-		);
+		});
 	});
 	$('.backlog ul').append('<li>Welcome to ' + main.osname + '! A web desktop. (' + main.version + ', build ' + main.build + ')</li>');
 	fileMenu.divider();

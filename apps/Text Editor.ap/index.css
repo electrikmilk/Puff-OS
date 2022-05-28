@@ -1,11 +1,18 @@
 body {}
+
 .contents {
-  position: fixed;
-  top: 50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 15px;
-  outline: none;
-  z-index: 1;
+	position: fixed;
+	top: 50px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 15px;
+	outline: none;
+	z-index: 1;
+}
+
+textarea.contents {
+	top: 40px !important;
+	border: none;
+	outline: none;
 }

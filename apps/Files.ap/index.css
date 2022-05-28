@@ -1,11 +1,19 @@
 html, body {
-	line-height: 1.4;
+	line-height: 1.6;
 	font-size: 15px;
 }
 
 .app-toolbar {
 	position: sticky;
 	top: 0;
+	display: grid;
+	grid-template-columns: 0fr 0fr 1fr;
+	grid-gap: 10px;
+}
+
+input#path {
+	width: -webkit-fill-available;
+	width: 70vw;
 }
 
 table {
