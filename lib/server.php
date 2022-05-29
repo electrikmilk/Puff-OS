@@ -1,5 +1,6 @@
 <?php
 require_once "../globals.php";
+define('PUFF_DIR', $_SERVER['DOCUMENT_ROOT']);
 $action = $_POST['action'];
 if ($action) {
 	if (file_exists("php/$action.php")) {
