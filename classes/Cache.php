@@ -2,20 +2,19 @@
 
 class Cache
 {
-	private $id, $app, $path;
+	private $id, $path;
 
 	public function __construct()
 	{
-		$this->app = APP;
 		$this->id = uniqid('', true);
 		$this->path = "{$_SERVER['DOCUMENT_ROOT']}/tmp";
-		if (!file_exists($this->app)) Files::dir($this->app);
-		if (!file_exists($this->id)) Files::dir("$this->app/$this->id");
+		if (!file_exists(APP)) Files::dir(APP);
+		if (!file_exists($this->id)) Files::dir(APP . "/$this->id");
 	}
 
 	public function get(string $name, string $group = null)
 	{
-		$tmp = Files::file("$this->path/$this->app/$this->id/$group/$name");
+		$tmp = Files::file("$this->path/" . APP . "/$this->id/$group/$name");
 		if (file_exists($name)) {
 			return $tmp;
 		} else {
@@ -25,8 +24,8 @@ class Cache
 
 	public function group(string $name)
 	{
-		$tmp = Files::dir("$this->app/$this->id/$name");
-		if (file_exists($this->app)) {
+		$tmp = Files::dir(APP . "/$this->id/$name");
+		if (file_exists(APP)) {
 			return false;
 		}
 		if ($tmp) {
@@ -38,7 +37,7 @@ class Cache
 
 	public function set(string $group = null, string $file, string $content = null)
 	{
-		$tmp = Files::dir("$this->path/$this->app/$this->id/$group");
+		$tmp = Files::dir("$this->path/" . APP . "/$this->id/$group");
 		if ($tmp) {
 			return true;
 		} else {
@@ -48,6 +47,6 @@ class Cache
 
 	public function remove(string $name, string $group = null)
 	{
-		return (new File("$this->path/$this->app/$this->id/$group/$name"))->remove($name);
+		return (new File("$this->path/" . APP . "/$this->id/$group/$name"))->remove($name);
 	}
 }
