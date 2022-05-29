@@ -2,17 +2,17 @@ cwd = '/';
 
 $(function () {
 	let viewMenu = new Menu('View');
-	viewMenu.add('list', 'As List', function () {
+	viewMenu.add('As List', function () {
 
 	});
-	viewMenu.add('icons', 'As Icons', function () {
+	viewMenu.add('As Icons', function () {
 
 	});
 	fileMenu.divider();
-	fileMenu.add('newfolder', 'New Folder', function () {
+	fileMenu.add('New Folder', function () {
 
 	});
-	fileMenu.add('newfile', 'New File', function () {
+	fileMenu.add('New File', function () {
 
 	});
 	$('form').on('submit', function (e) {
@@ -23,6 +23,33 @@ $(function () {
 	});
 	load();
 	Window.show();
+	if (get['action'] === 'save') {
+		Window.dialog.status('Saving...', get['path']);
+		main.network.newRequest({
+			url: 'action',
+			data: {
+				action: 'save',
+				path: get['path'],
+				content: get['content']
+			},
+			dataType: 'json',
+			success: function (response) {
+				if (response === 'saved') {
+					Window.dialog.status('Saved!');
+					setTimeout(function () {
+						// Refocus app that requested save
+						main.apps.open(get['from']);
+						Window.close();
+					}, 1000);
+				} else {
+
+				}
+			},
+			error: function () {
+
+			}
+		});
+	}
 });
 
 // todo: set defaults
@@ -60,7 +87,11 @@ function load(new_path) {
 		},
 		success: function (response) {
 			app.log('load()', response);
-			Window.title(cwd);
+			if (get['action'] === 'pick') {
+				Window.title('Open File');
+			} else {
+				Window.title(cwd);
+			}
 			$('.files').html(response);
 		},
 		error: function (error) {

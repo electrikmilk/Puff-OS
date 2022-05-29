@@ -27,6 +27,9 @@ class File
 		if (!file_exists($this->path)) {
 			return false;
 		}
+		if (!is_readable($this->path)) {
+			throw new Error("Unable to read file '$this->path'.");
+		}
 		return file_get_contents($this->path);
 	}
 
@@ -43,9 +46,8 @@ class File
 		}
 		if (file_put_contents($this->path, $new_content)) {
 			return true;
-		} else {
-			throw new Error("Unable to write to file '$this->path'.");
 		}
+		throw new Error("Unable to write to file '$this->path'.");
 	}
 
 	public function remove($safe = true)
