@@ -1,32 +1,36 @@
 $(function () {
 	Window.show();
-	main.network.request('/apps/Settings.ap/pages.php', 'GET', {},
-		function (pages) {
-			$('.pages').html(pages);
+	main.network.newRequest({
+		type: 'GET',
+		url: app.path + 'pages.php',
+		success: function (response) {
+			$('.pages').html(response);
 			$('.pages > div').on('click', function () {
-				main.network.request('/apps/Settings.ap/pages/page.php', 'GET',
-					{
-						page: $(this).attr('data-page')
+				let page = $(this).data('page');
+				main.network.newRequest({
+					url: app.path + 'pages/page.php',
+					data: {
+						page: page
 					},
-					function (response) {
+					success: function (response) {
 						$('.pages').slideUp();
-						$('.page').slideDown();
 						$('.page-content').html(response);
+						$('.page').slideDown();
 					},
-					function (error) {
+					error: function (error) {
 						app.log('error loading page', 'error', error);
 						Window.dialog.message('Whoops!', 'Error loading settings pane. Please try again.');
 					}
-				);
+				});
 			});
 		},
-		function (error) {
+		error: function (error) {
 			app.log('error loading pages', 'error', error);
 			Window.dialog.message('Whoops!', 'Error loading settings panes', function () {
 				Window.close();
 			});
 		}
-	);
+	});
 	$('.back-btn').on('click', function () {
 		$('.pages').slideDown();
 		$('.page').slideUp();

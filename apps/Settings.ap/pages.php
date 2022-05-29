@@ -2,5 +2,6 @@
 require_once "../../lib/apis/application.php";
 $files = Files::dir("pages");
 foreach ($files as $page) {
-	echo "<div data-page='{$page['name']}'>{$page['name']}</div>";
+	if ($page['filename'] === 'page') continue;
+	echo "<div data-page='{$page['filename']}'>{$page['filename']}</div>";
 }
