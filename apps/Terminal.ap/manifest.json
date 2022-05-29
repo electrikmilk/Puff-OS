@@ -6,30 +6,30 @@
   "menus": {
     "Quick": {
       "Refresh taskbar": {
-        "id": "applist"
+        "id": "command(\"app list\")"
       },
       "Check network": {
-        "id": "net"
+        "id": "command(\"net\")"
       },
       "View processes": {
-        "id": "top"
+        "id": "command(\"top\")"
       },
       "Clear past output": {
-        "id": "clear"
+        "id": "command(\"clear\")"
       },
       "Available commands": {
-        "id": "help"
+        "id": "command(\"help\")"
       }
     },
     "Demos": {
       "Not a virus": {
-        "onclick": "apps.open('Not a virus')"
+        "onclick": "apps.open(\"Not a virus\")"
       },
       "Dialogs": {
-        "onclick": "apps.open('Dialogs')"
+        "onclick": "apps.open(\"Dialogs\")"
       },
       "UI Gallery": {
-        "onclick": "apps.open('UI Gallery')"
+        "onclick": "apps.open(\"UI Gallery\")"
       }
     }
   },
