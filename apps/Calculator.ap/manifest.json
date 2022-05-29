@@ -4,7 +4,7 @@
   "about": "Simple calculator app.",
   "sbin": true,
   "width": "250px",
-  "height": "253px",
+  "height": "233px",
   "import": [
     "menu",
     "applet"
