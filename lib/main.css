@@ -264,7 +264,7 @@ html, body {
 }
 
 .app-item.open:after {
-	content: "&bull;";
+	content: "•";
 	text-align: center;
 	display: block;
 	color: #333333;
