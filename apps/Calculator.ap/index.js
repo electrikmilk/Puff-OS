@@ -3,10 +3,10 @@ let lastResult = main.system.cache.get("lastResult");
 $(function () {
 	if (lastResult) $(".result").html(lastResult);
 	let outputMenu = new Menu("Output");
-	outputMenu.add("save", "Save current result", function () {
+	outputMenu.add("Save current result", function () {
 		main.system.cache.set("lastResult", parseInt($(".result").html()));
 	});
-	outputMenu.add("clear", "Clear current saved result", function () {
+	outputMenu.add("Clear current saved result", function () {
 		main.system.cache.set("lastResult", "0");
 	});
 	Window.show();

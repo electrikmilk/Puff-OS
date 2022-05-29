@@ -67,16 +67,16 @@ $(function () {
 	});
 	$('.backlog ul').append('<li>Welcome to ' + main.osname + '! A web desktop. (' + main.version + ', build ' + main.build + ')</li>');
 	fileMenu.divider();
-	fileMenu.add('console', 'New Console', function () {
+	fileMenu.add('New Console', function () {
 		main.apps.open('Console', true);
 	});
-	fileMenu.add('audioman', 'New Audio Manager', function () {
+	fileMenu.add('New Audio Manager', function () {
 		main.apps.open('Audio Manager', true);
 	});
-	fileMenu.add('processman', 'New Process Manager', function () {
+	fileMenu.add('New Process Manager', function () {
 		main.apps.open('Process Manager', true);
 	});
-	fileMenu.add('mmonitor', 'New Memory Monitor', function () {
+	fileMenu.add('New Memory Monitor', function () {
 		main.apps.open('Monitor Monitor', true);
 	});
 	command('help');

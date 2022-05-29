@@ -53,7 +53,7 @@ $(function () {
 		// }
 	}, 1500);
 	// let processMenu = new Menu("Process");
-	// processMenu.add("kill", "Kill process", function() {
+	// processMenu.add("Kill process", function() {
 	//   if (selected_process) {
 	//     let name = $(selected_process).attr("data-name");
 	//     if (!cantkill.includes(name)) kill($(selected_process).attr("data-id"), name);

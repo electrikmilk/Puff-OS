@@ -1,25 +1,51 @@
+let path = false;
+
 $(function () {
-	if (!get['path']) {
+	if (get['path']) {
+		path = get['path'];
+	}
+	if (!path) {
 		let formatMenu = new Menu('Format');
-		formatMenu.add('bold', 'Bold', function () {
+		formatMenu.add('Bold', 'command+b', function () {
 			format('bold');
 		});
-		formatMenu.add('italic', 'Italic', function () {
+		formatMenu.add('Italic', function () {
 			format('italic');
 		});
-		formatMenu.add('underline', 'Underline', function () {
+		formatMenu.add('Underline', function () {
 			format('underline');
 		});
-		formatMenu.add('strikeThrough', 'Strike-through', function () {
+		formatMenu.add('Strike-through', function () {
 			format('strikeThrough');
 		});
 	}
+	fileMenu.divider();
+	fileMenu.add('Open...', function () {
+		main.apps.open('Files', true, {
+			action: 'pick',
+			app: app.name
+		});
+	});
+	fileMenu.add('Save', function () {
+		save();
+	});
 	Window.show();
 	$('.contents').focus();
 });
 
-function close() {
-	Window.close();
+function save() {
+	let content = '';
+	if ($('textarea.contents').length === 0) {
+		content = $('textarea.contents').val();
+	} else {
+		content = $('.contents').html();
+	}
+	main.apps.open('Files', true, {
+		action: 'save',
+		from: app.name,
+		content: content,
+		path: path
+	});
 }
 
 function format(type) {
@@ -33,4 +59,8 @@ function format(type) {
 		return;
 	}
 	document.execCommand(type);
+}
+
+function close() {
+	Window.close();
 }

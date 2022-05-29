@@ -35,11 +35,12 @@ if (file_exists($manifest)) {
 						<?php
 						foreach ($items as $label => $opt) {
 							unset($onclick, $function);
+							$id = $opt['id'] ?? uniqid();
 							$item_label = str_replace("%name", $manifest['name'], $label);
 							if ($opt['onclick']) {
 								$onclick = "onclick='" . str_replace("%name", $manifest['name'], str_replace("'", "&quot;", $opt['onclick'])) . "'";
 							}
-							echo "<li $onclick data-item='{$opt['id']}'>$item_label</li>";
+							echo "<li $onclick data-item='$id'>$item_label</li>";
 							if ($opt['divider']) {
 								echo "<hr/>";
 							}
