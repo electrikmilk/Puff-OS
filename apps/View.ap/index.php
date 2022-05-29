@@ -43,6 +43,7 @@ if (!file_exists($path)) {
 		</div>
 		<?php
 	} else {
-		echo "Unsupported (" . basename($path) . ")";
+		$file = new File($path);
+		echo $file->read();
 	}
 }

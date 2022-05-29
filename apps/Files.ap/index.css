@@ -26,6 +26,12 @@ table thead th {
 	border-right: 1px solid #dddddd;
 }
 
+table thead {
+	position: sticky;
+	top: 40px;
+	background: white;
+}
+
 table tbody td {
 	padding: 5px;
 }

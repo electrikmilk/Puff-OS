@@ -22,7 +22,7 @@ class File
 		return Files::size($this->path);
 	}
 
-	public function contents()
+	public function read()
 	{
 		if (!file_exists($this->path)) {
 			return false;
@@ -33,21 +33,21 @@ class File
 		return file_get_contents($this->path);
 	}
 
-	public function update(string $new_content)
+	public function write(string $new_content)
 	{
 		if (!file_exists($this->path)) {
 			throw new Error("File '$this->path' does not exist!");
 		}
 		if (!is_writable($this->path)) {
-			return false;
+			throw new Error("File is not writeable '$this->path'.");
 		}
 		if (!isset($new_content)) {
 			return false;
 		}
-		if (file_put_contents($this->path, $new_content)) {
-			return true;
+		if (!file_put_contents($this->path, $new_content)) {
+			throw new Error("Unable to write to file '$this->path'.");
 		}
-		throw new Error("Unable to write to file '$this->path'.");
+		return true;
 	}
 
 	public function remove($safe = true)

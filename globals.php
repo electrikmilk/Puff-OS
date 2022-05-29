@@ -1,4 +1,5 @@
 <?php
+define('PUFF_DIR', $_SERVER['DOCUMENT_ROOT']);
 // Autoload Classes
 spl_autoload_register(function ($className) {
 	$path = $_SERVER['DOCUMENT_ROOT'] . "/classes/";

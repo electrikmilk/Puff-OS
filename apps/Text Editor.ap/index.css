@@ -11,6 +11,10 @@ body {}
 	z-index: 1;
 }
 
+span.file {
+	display: none;
+}
+
 textarea.contents {
 	top: 40px !important;
 	border: none;

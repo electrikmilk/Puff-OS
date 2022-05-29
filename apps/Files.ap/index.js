@@ -52,11 +52,10 @@ $(function () {
 	}
 });
 
-// todo: set defaults
 function file(path, mime, ext) {
 	let type = mime.split('/')[0];
 	if (!path) return;
-	let app = '';
+	let app = 'View';
 	switch (type) {
 		case 'image':
 			app = 'View';
