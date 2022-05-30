@@ -1,3 +1,4 @@
 <?php
-$return = "logging you out...";
-echo "<script>main.system.logout();</script>";
+$command = new Command();
+$command->script('main.system.logout();');
+$return = "logging out...";

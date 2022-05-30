@@ -1,6 +1,5 @@
 <?php
 require_once '../../lib/apis/application.php';
-
 $action = $_POST['action'];
 if ($action) {
 	if (file_exists("actions/$action.php")) {

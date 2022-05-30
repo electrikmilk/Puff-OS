@@ -1,16 +1,21 @@
 let audio;
-let file = get['file'];
+let path = false;
+let filename;
 type = '';
 
 $(function () {
-	if (file) {
-		if (type === 'audio') {
-			audio = main.apps.audio(app);
-			loadAudio(file);
-		}
-	}
 	Window.show();
-	Window.title(file);
+	App.onReady(function () {
+		if (Window.get('path')) {
+			path = Window.get('path');
+			filename = main.end(path.split('/'));
+			if (type === 'audio') {
+				audio = main.apps.audio(app);
+				loadAudio(path);
+			}
+			Window.title(filename);
+		}
+	});
 });
 
 function loadAudio(url) {

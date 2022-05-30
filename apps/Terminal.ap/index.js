@@ -1,22 +1,7 @@
 const session = main.system.guid();
+let last_command;
 
 $(function () {
-	// These aren't working for now...
-	// Window.menu("applist", function() {
-	//   command("app list");
-	// });
-	// Window.menu("net", function() {
-	//   command("net");
-	// });
-	// Window.menu("top", function() {
-	//   command("top");
-	// });
-	// Window.menu("clear", function() {
-	//   command("clear");
-	// });
-	// Window.menu("help", function() {
-	//   command("help");
-	// });
 	$('form#terminal input').focus();
 	$('form#terminal').on('submit', function () {
 		let command = $('form#terminal input').val();
@@ -54,6 +39,7 @@ $(function () {
 				}
 				$('html, body').scrollTop($(document).height());
 				$('form#terminal input').focus();
+				last_command = command;
 			},
 			error: function (error) {
 				$('form#terminal input').prop('disabled', false);
@@ -67,17 +53,18 @@ $(function () {
 	});
 	$('.backlog ul').append('<li>Welcome to ' + main.osname + '! A web desktop. (' + main.version + ', build ' + main.build + ')</li>');
 	fileMenu.divider();
-	fileMenu.add('New Console', function () {
-		main.apps.open('Console', true);
+	fileMenu.add('Clear Terminal', function () {
+		command('clear');
 	});
-	fileMenu.add('New Audio Manager', function () {
-		main.apps.open('Audio Manager', true);
+	fileMenu.add('View Session History', function () {
+		command('history list');
 	});
-	fileMenu.add('New Process Manager', function () {
-		main.apps.open('Process Manager', true);
+	fileMenu.add('Clear history', function () {
+		command('history clear');
 	});
-	fileMenu.add('New Memory Monitor', function () {
-		main.apps.open('Monitor Monitor', true);
+	fileMenu.divider();
+	fileMenu.add('Previous command', ['up'], function () {
+		$('form#terminal input').val(last_command);
 	});
 	command('help');
 	Window.show();

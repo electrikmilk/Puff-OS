@@ -1,13 +1,13 @@
 <?php
-$escape = false;
+$command = new Command();
 $cwd = $session->get('cwd');
 $files_object = Files::dir($cwd);
 $files = [];
 foreach ($files_object as $f) {
 	$files[] = $f['name'];
 }
-$list = "";
-foreach ($files as $file) {
-	$list .= "<div>$file</div>";
+if ($args[0] === "list") {
+	$command->list($files);
+} else {
+	$command->grid($files);
 }
-$return .= "<div class='shortlist'>$list</div>";

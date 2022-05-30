@@ -1,11 +1,7 @@
 <?php
+$command = new Command();
 if ($args[0] === "f"):
-	?>
-	<script>
-		let guid = main.system.guid();
-		$('.backlog ul').append('<li class=\'response\'>' + guid + '</li>');
-	</script>
-<?php
+	$command->code("$('.backlog ul').append('<li class=\'response\'>' + main.system.guid() + '</li>');");
 else :
-	$return = uniqid('', true);
+	$command->output(uniqid('', true));
 endif;

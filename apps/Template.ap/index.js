@@ -4,17 +4,27 @@ Your apps JavaScript goes here...
 
 $(function () {
 	// Do stuff before you show your app...
-	app.log("I'm ready!");
+	app.log('I\'m ready!');
 	// Tell the system the app is ready...
 	Window.show();
 	// Show basic dialog...
-	Window.dialog.message(false, "Hey there!", function () {
-		app.log("Pressed OK!");
+	Window.dialog.message(false, 'Hey there!', function () {
+		app.log('Pressed OK!');
 	});
-	// Assign action to menubar menu defined in manifest.json...
-	Window.menu("menuitem", function () {
-		Window.dialog.message(false, "You clicked the menu item.", function () {
-			app.log("Pressed OK!");
+	// Access default menubar menus...
+	fileMenu.divider();
+	fileMenu.add('My File Menu Item', function () {
+		Window.dialog.message(false, 'You clicked the file menu item.', function () {
+			app.log('Pressed OK!');
+		});
+	});
+	App.onReady(function () {
+		// Assign action to menubar menu...
+		let myMenuBarMenu = new Menu('Example', 2);
+		myMenuBarMenu.add('Example Item', function () {
+			Window.dialog.message(false, 'You clicked the example menu item.', function () {
+				app.log('Pressed OK!');
+			});
 		});
 	});
 });

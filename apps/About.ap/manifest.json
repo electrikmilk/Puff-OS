@@ -6,7 +6,7 @@
   "index": "index.php",
   "sbin": true,
   "width": "230px",
-  "height": "230px",
+  "height": "250px",
   "center": true,
   "service": true
 }

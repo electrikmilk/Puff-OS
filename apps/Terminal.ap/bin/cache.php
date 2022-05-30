@@ -1,17 +1,15 @@
 <?php
-if ($args[0]) {
-	if ($args[0] === "count") {
+$command = new Command([
+	'count' => 'get number of items stored in cache',
+	'purge' => 'purge the cache'
+]);
+switch ($args[0]) {
+	case 'count':
 		$return = "Number of items stored cache:";
-	} elseif ($args[0] === "purge") {
+		$command->script("$('.backlog ul').append('<li class=\'response\'>' + main.system.cache.count() + '</li>');");
+		break;
+	case 'purge':
+		$command->script("main.system.cache.purge()");
 		$return = "purged cache";
-	} else {
-		return;
-	}
-	if ($args[0] === "count") {
-		?>
-		<script>$(".backlog ul").append("<li class='response'>" + main.system.cache.<?php echo $args[0]; ?>() + "</li>");</script>
-		<?php
-	}
-} else {
-	$return = "example usage: cache count, cache purge";
+		break;
 }

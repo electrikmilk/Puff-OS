@@ -1,2 +1,4 @@
-<?php $return = "forcing reboot..."; ?>
-<script>main.system.refresh(true);</script>
+<?php
+$command = new Command();
+$command->script('main.system.refresh(true)');
+$command->output('forcing reboot...');

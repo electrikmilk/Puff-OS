@@ -67,6 +67,11 @@ function file(path, mime, ext) {
 			app = 'Text Editor';
 			break;
 	}
+	switch (ext) {
+		case 'html':
+			app = 'HTML Playground';
+			break;
+	}
 	main.apps.open(app, true, {
 		path: path
 	});

@@ -2,6 +2,7 @@
 $app_path = explode('/', getcwd());
 define('APP_NAME', str_replace('.ap', '', end($app_path)));
 define('APP_DIR', getcwd());
+define('PUFF_DIR', $_SERVER['DOCUMENT_ROOT']);
 
 // Autoload App Classes
 $classes = array("Cache", "Files", "Cookie", "Log");

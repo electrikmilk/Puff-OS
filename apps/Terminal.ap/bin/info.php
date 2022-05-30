@@ -1,2 +1,6 @@
 <?php
-$return = "{$_SERVER['HTTP_REFERER']}\n{$_SERVER['HTTP_USER_AGENT']}";
+$command = new Command();
+$command->table([
+	'url' => $_SERVER['HTTP_REFERER'],
+	'user agent' => $_SERVER['HTTP_USER_AGENT']
+]);

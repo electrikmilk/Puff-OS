@@ -2,18 +2,12 @@
   "name": "Template",
   "version": "1.0.0",
   "about": "Basic app to show how easy it is to make an app!",
-  "menus": {
-    "Example": {
-      "Menu Item": {
-        "id": "menuitem"
-      }
-    }
-  },
   "import": [
     "menu",
     "applet"
   ],
   "applet": {
+    "icon": "applet_icon.png",
     "type": "popup",
     "width": "400px",
     "height": "150px"

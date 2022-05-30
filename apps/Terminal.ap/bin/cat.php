@@ -1,5 +1,5 @@
 <?php
-if ($args[0]) {
+if (count($args)) {
 	$cwd = $session->get('cwd');
 	$path = "$cwd/{$args[0]}";
 	if (!file_exists($path)) {
@@ -7,8 +7,8 @@ if ($args[0]) {
 	} elseif (is_dir($path)) {
 		$return = "Is a directory: $path";
 	} else {
-		echo file_get_contents($path);
+		$return = file_get_contents($path);
 	}
 } else {
-	$return = "output file contents; usage: cat {file}";
+	$return = "usage: cat [FILE]";
 }
