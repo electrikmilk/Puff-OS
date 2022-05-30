@@ -1,0 +1,20 @@
+{
+  "name": "Calendar",
+  "version": "1.0.0",
+  "about": "Default Calendar Applet",
+  "sbin": false,
+  "service": true,
+  "width": "284px",
+  "height": "247px",
+  "import": [
+    "menu",
+    "applet"
+  ],
+  "applet": {
+    "type": "popup",
+    "width": "250px",
+    "height": "210px",
+    "overflow": "hidden",
+    "icon": "calendar.png"
+  }
+}
