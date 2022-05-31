@@ -25,6 +25,7 @@ desktop and run applications, etc. It runs in a popup window that will go fullsc
 - Template App
 - UI Gallery
 - Bug Reporter
+- Calendar
 
 ## It can...
 
