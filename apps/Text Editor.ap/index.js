@@ -67,11 +67,12 @@ function save() {
 	} else {
 		content = $('.contents').html();
 	}
-	file.write(content, function (result) {
-		if (result !== true) {
-			Window.dialog.message('Failed to write to file!', path);
-		}
-	});
+	app.log('saving content', content);
+	// file.write(content, function (result) {
+	// 	if (result !== true) {
+	// 		Window.dialog.message('Failed to write to file!', path);
+	// 	}
+	// });
 }
 
 function format(type) {
