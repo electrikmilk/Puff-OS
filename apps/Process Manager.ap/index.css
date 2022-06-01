@@ -1,58 +1,79 @@
 html, body {
-  line-height: 1.4;
-  font-size: 15px;
+	line-height: 1.4;
+	font-size: 15px;
 }
+
 table {
-  width: 100%;
-  border-collapse: collapse;
+	width: 100%;
+	border-collapse: collapse;
 }
+
+table thead {
+	position: sticky;
+	top: 40px;
+	background: white;
+}
+
 table thead th {
-  padding: 3px 5px;
-  border-right: 1px solid #ddd;
+	padding: 3px 5px;
+	border-right: 1px solid #dddddd;
 }
+
 table tbody td {
-  padding: 5px;
+	padding: 5px;
 }
+
 table tr td:first-child {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 table thead th {
-  font-weight: bold;
-  text-align: left;
+	font-weight: bold;
+	text-align: left;
 }
+
 table tbody tr {
-  border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 }
+
 table thead tr {
-  border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #dddddd;
 }
+
 table tbody tr:nth-child(odd) {
-  background-color: #eee;
+	background-color: #eeeeee;
 }
+
 .memory {
-  margin-top: 8px;
+	margin-top: 8px;
 }
+
 .output {
-  height: 230px;
-  overflow-y: auto;
-  border-bottom: 1px solid #ddd;
+	height: 230px;
+	overflow-y: auto;
+	border-bottom: 1px solid #dddddd;
 }
+
 .output .ui-selecting {
-  background: rgb(98, 177, 251);
+	background: rgb(98, 177, 251);
 }
+
 .output .ui-selected {
-  background: rgb(16, 128, 233);
-  color: white;
+	background: rgb(16, 128, 233);
+	color: white;
 }
+
 .memorymonitor {
-  margin: 10px;
+	margin: 10px;
 }
+
 .stats {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
 }
+
 .stats div p {
-  opacity: .7;
+	opacity: .7;
 }
