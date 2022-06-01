@@ -1,3 +1,5 @@
 .DS_Store
 *.icloud
 /.idea/
+/apps/Terminal.ap/sessions/
+/res/logs/puff.log
