@@ -2,8 +2,9 @@
 $app_path = explode('/', getcwd());
 define('APP_NAME', str_replace('.ap', '', end($app_path)));
 define('APP_DIR', getcwd());
-define('PUFF_DIR', $_SERVER['DOCUMENT_ROOT']);
-
+if (!defined('PUFF_DIR')) {
+	define('PUFF_DIR', $_SERVER['DOCUMENT_ROOT']);
+}
 // Autoload App Classes
 $classes = array("Cache", "Files", "Cookie", "Log");
 spl_autoload_register(function ($className) use ($classes) {
