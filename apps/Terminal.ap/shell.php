@@ -40,9 +40,6 @@ if (file_exists("bin/$command.php")) {
 		if ($arg === $split[0]) continue;
 		$args[] = $arg;
 	}
-//	foreach (explode(" ", str_replace("$command ", "", str_replace("\ ", "~", $input))) as $arg) {
-//		$args[] = str_replace("~", " ", $arg);
-//	}
 	include_once "bin/$command.php";
 } else {
 	$return = "command not found: $command";

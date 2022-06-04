@@ -15,7 +15,7 @@ html, body {
 }
 
 form {
-	display: flex;
+	display: flow-root;
 }
 
 ul {
@@ -41,9 +41,7 @@ input {
 	caret-color: lightgreen !important;
 	font-size: 14px !important;
 	outline: none;
-	width: -webkit-fill-available;
-	width: fill-available;
-	width: 100%;
+	width: auto;
 	padding: 0 5px !important;
 	margin: 0;
 }

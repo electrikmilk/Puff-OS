@@ -7,7 +7,9 @@ $(function () {
 		let command = $('form#terminal input').val();
 		$('form#terminal input').val('');
 		if (!command) {
-			$('.backlog ul').append('<li>$</li>');
+			signature(function (signature) {
+				$('.backlog ul').append('<li>' + signature + '</li>');
+			});
 			return;
 		}
 		app.log(command);
@@ -15,12 +17,14 @@ $(function () {
 			$('.backlog ul').empty();
 			return;
 		}
-		$('.backlog ul').append('<li>$ ' + command + '</li>');
+		signature(command, function (signature) {
+			$('.backlog ul').append('<li>' + signature + ' ' + command + '</li>');
+		});
 		$('form#terminal input').prop('disabled', true);
 		$('form#terminal').hide();
 		Window.title(command);
 		main.network.newRequest({
-			url: '/apps/Terminal.ap/shell',
+			url: app.path + 'shell',
 			data: {
 				command: command,
 				session: session
@@ -40,6 +44,9 @@ $(function () {
 				$('html, body').scrollTop($(document).height());
 				$('form#terminal input').focus();
 				last_command = command;
+				signature(function (signature) {
+					$('#signature').html(signature);
+				});
 			},
 			error: function (error) {
 				$('form#terminal input').prop('disabled', false);
@@ -69,6 +76,21 @@ $(function () {
 	command('help');
 	Window.show();
 });
+
+function signature(command, callback) {
+	if (!callback) {
+		callback = command;
+	}
+	main.network.newRequest({
+		url: app.path + 'signature',
+		data: {
+			session: session
+		},
+		success: function (signature) {
+			callback(signature);
+		}
+	});
+}
 
 function command(string) {
 	$('form#terminal input').val(string);

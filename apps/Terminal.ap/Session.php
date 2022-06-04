@@ -6,9 +6,6 @@ class Session
 
 	public function __construct($id)
 	{
-		$default = [
-			'cwd' => '/'
-		];
 		$this->id = $id;
 		$this->path = "sessions/$id.json";
 		if (!file_exists("sessions")) {
@@ -17,6 +14,9 @@ class Session
 			}
 		}
 		if (!file_exists($this->path)) {
+			$default = [
+				'cwd' => '/'
+			];
 			try {
 				file_put_contents($this->path, json_encode($default, JSON_THROW_ON_ERROR));
 			} catch (JsonException $e) {
