@@ -5,6 +5,8 @@ $manifest = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), t
 if ($manifest['title'] !== false) {
 	$title = $manifest['name'];
 }
+define('APP_NAME', $app);
+define('APP_DIR', PUFF_DIR . "/apps/$app.ap/");
 ?>
 <!doctype html>
 <html>
