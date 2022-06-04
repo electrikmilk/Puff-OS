@@ -1,10 +1,12 @@
 <?php
 require_once '../../globals.php';
 $app = $_REQUEST['app'];
-$info = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), true);
-if ($info['title'] !== false) {
-	$title = $info['name'];
+$manifest = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), true);
+if ($manifest['title'] !== false) {
+	$title = $manifest['name'];
 }
+define('APP_NAME', $app);
+define('APP_DIR', PUFF_DIR . "/apps/$app.ap/");
 ?>
 <!doctype html>
 <html>
@@ -12,10 +14,10 @@ if ($info['title'] !== false) {
 	<title><?php echo $title; ?></title>
 	<script type="text/javascript" src="/lib/apis/app.js"></script>
 	<script>
-		let manifest = <?php echo json_encode(json_decode(file_get_contents("../../apps/$app.ap/manifest.json"))); ?>;
+		let manifest = <?php echo file_get_contents("../../apps/$app.ap/manifest.json"); ?>;
 	</script>
 	<?php
-	foreach ($info['include'] as $include) {
+	foreach ($manifest['include'] as $include) {
 		$path = "/apps/$app.ap/";
 		if (stripos($include, "js")) {
 			echo "<script type='text/javascript' src='$path$include' defer></script>";
@@ -42,8 +44,8 @@ if ($info['title'] !== false) {
 	</div>
 </div>
 <?php
-if ($info['index']) {
-	$index = $info['index'];
+if ($manifest['index']) {
+	$index = $manifest['index'];
 } else {
 	$index = "index.html";
 }
@@ -58,7 +60,7 @@ if (file_exists($path)) {
 } else {
 	?>
 	<script type="text/javascript">
-		parent.main.log('<?=$app?>.ap DOM not found!', "warn");
+		parent.main.log('<?=$app?>.ap DOM not found!', 'warn');
 	</script>
 	<?php
 }

@@ -30,6 +30,6 @@ switch ($args[0]) {
 		break;
 	case 'refresh':
 		$command->script("main.apps.list();");
-		$return = "refreshed app lists";
+		$return = "refreshed app list";
 		break;
 }

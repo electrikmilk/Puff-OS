@@ -1,10 +1,14 @@
 <?php
-new Command([
-	'list' => 'list current session history',
+$command = new Command([
+	'id' => 'print current session id',
+	'history' => 'list current session history',
 	'clear' => 'clears all sessions and their history'
 ]);
 switch ($args[0]) {
-	case 'list':
+	case 'id':
+		$command->output($session->id);
+		break;
+	case 'history':
 		$return = file_get_contents($history_file);
 		break;
 	case 'clear':

@@ -1,5 +1,21 @@
 <?php
 
+abstract class Sort
+{
+	const NAME = 'name';
+	const KIND = 'type';
+	const DATE_M = 'last_mod';
+	const DATE_A = 'last_access';
+	const DATE_C = 'last_mod';
+	const SIZE = 'size';
+}
+
+abstract class Order
+{
+	const ASC = 'ksort';
+	const DESC = 'krsort';
+}
+
 class Files
 {
 	public static function file($path)
@@ -55,6 +71,21 @@ class Files
 			}
 		}
 		return $files_array;
+	}
+
+	public static function sort(array $files, $sort, $order)
+	{
+		$sortable = [];
+		foreach ($files as $file) {
+			$key = $file[$sort];
+			$sortable[$key] = $file;
+		}
+		$order($sortable);
+		$final_array = [];
+		foreach ($sortable as $item) {
+			$final_array[] = $item;
+		}
+		return $final_array;
 	}
 
 	public static function size($path)
