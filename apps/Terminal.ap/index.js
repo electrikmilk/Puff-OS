@@ -1,7 +1,8 @@
-const session = main.system.guid();
+let session = main.system.guid();
 let last_command;
 
 $(function () {
+	$('#session_id').html(session);
 	$('form#terminal input').focus();
 	$('form#terminal').on('submit', function () {
 		let command = $('form#terminal input').val();
@@ -64,10 +65,10 @@ $(function () {
 		command('clear');
 	});
 	fileMenu.add('View Session History', function () {
-		command('history list');
+		command('session history');
 	});
-	fileMenu.add('Clear history', function () {
-		command('history clear');
+	fileMenu.add('Clear Session History', function () {
+		command('session clear');
 	});
 	fileMenu.divider();
 	fileMenu.add('Previous command', ['up'], function () {
