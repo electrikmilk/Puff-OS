@@ -4,6 +4,8 @@
   "about": "View media files",
   "index": "index.php",
   "sbin": true,
-  "service": true,
-  "width": "500px"
+  "width": "500px",
+  "import": [
+    "menu"
+  ]
 }
