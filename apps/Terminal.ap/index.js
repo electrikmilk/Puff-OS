@@ -3,10 +3,10 @@ let last_command;
 
 $(function () {
 	$('#session_id').html(session);
-	$('form#terminal input').focus();
-	$('form#terminal').on('submit', function () {
-		let command = $('form#terminal input').val();
-		$('form#terminal input').val('');
+	$('form#input input').focus();
+	$('form#input').on('submit', function () {
+		let command = $('form#input input').val();
+		$('form#input input').val('');
 		if (!command) {
 			signature(function (signature) {
 				$('.backlog ul').append('<li>' + signature + '</li>');
@@ -21,8 +21,8 @@ $(function () {
 		signature(command, function (signature) {
 			$('.backlog ul').append('<li>' + signature + ' ' + command + '</li>');
 		});
-		$('form#terminal input').prop('disabled', true);
-		$('form#terminal').hide();
+		$('form#input input').prop('disabled', true);
+		$('form#input').hide();
 		Window.title(command);
 		main.network.newRequest({
 			url: app.path + 'shell',
@@ -31,31 +31,31 @@ $(function () {
 				session: session
 			},
 			success: function (response) {
-				$('form#terminal');
-				$('form#terminal input').prop('disabled', false);
-				$('form#terminal').show();
+				$('form#input');
+				$('form#input input').prop('disabled', false);
+				$('form#input').show();
 				if (response.includes('error') || response.includes('not found')) {
 					app.log(command, 'error', response);
-					application.title(command + ' failed!');
-					$('.backlog ul').append('<li class=\'response\' id=\'error\'>' + response + '</li>');
+					Window.title(command + ' failed!');
+					$('.backlog ul').append('<li class=\'response color-red\'>' + response + '</li>');
 				} else {
 					app.log(command, 'success', response);
 					if (response) $('.backlog ul').append('<li class=\'response\'>' + response + '</li>');
 				}
 				$('html, body').scrollTop($(document).height());
-				$('form#terminal input').focus();
+				$('form#input input').focus();
 				last_command = command;
 				signature(function (signature) {
 					$('#signature').html(signature);
 				});
 			},
 			error: function (error) {
-				$('form#terminal input').prop('disabled', false);
-				$('form#terminal').show();
+				$('form#input input').prop('disabled', false);
+				$('form#input').show();
 				Window.title(command + ' failed!');
 				app.log('\'' + command + '\' command failed', 'error', error);
-				$('.backlog ul').append('<li class=\'response\' id=\'error\'>failed to run \'' + command + '\'</li>');
-				$('form#terminal input').focus();
+				$('.backlog ul').append('<li class=\'response color-red\'>failed to run \'' + command + '\'</li>');
+				$('form#input input').focus();
 			}
 		});
 	});
@@ -72,7 +72,7 @@ $(function () {
 	});
 	fileMenu.divider();
 	fileMenu.add('Previous command', ['up'], function () {
-		$('form#terminal input').val(last_command);
+		$('form#input input').val(last_command);
 	});
 	command('help');
 	Window.show();
@@ -94,8 +94,8 @@ function signature(command, callback) {
 }
 
 function command(string) {
-	$('form#terminal input').val(string);
-	$('form#terminal').submit();
+	$('form#input input').val(string);
+	$('form#input').submit();
 }
 
 function close() {

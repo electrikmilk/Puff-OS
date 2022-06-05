@@ -21,6 +21,13 @@ class Command
 		$this->return .= $banner ? $this->banner($output) : $output;
 	}
 
+	public function error($output)
+	{
+		global $escape;
+		$escape = false;
+		$this->return .= "<span class='color-red'>$output</span>";
+	}
+
 	public function script($code)
 	{
 		echo "<script>$code</script>";

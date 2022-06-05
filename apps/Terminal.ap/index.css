@@ -15,7 +15,7 @@ html, body {
 }
 
 form {
-	display: flow-root;
+	display: inline-block;
 }
 
 ul {
@@ -28,8 +28,16 @@ ul li.response {
 	color: white;
 }
 
-ul li#error {
-	color: red;
+.color-red {
+	color: palevioletred !important;
+}
+
+.color-green {
+	color: darkseagreen !important;
+}
+
+.color-orange {
+	color: coral !important;
 }
 
 input {
@@ -41,7 +49,7 @@ input {
 	caret-color: lightgreen !important;
 	font-size: 14px !important;
 	outline: none;
-	width: auto;
+	width: 100%;
 	padding: 0 5px !important;
 	margin: 0;
 }
