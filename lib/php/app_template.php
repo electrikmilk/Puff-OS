@@ -1,7 +1,11 @@
 <?php
 require_once '../../globals.php';
 $app = $_REQUEST['app'];
-$manifest = json_decode(file_get_contents("../../apps/$app.ap/manifest.json"), true);
+$manifest = PUFF_DIR . "/apps/$app.ap/manifest.json";
+if (!file_exists($manifest)) {
+	die("Unable to load manifest! ($manifest)");
+}
+$manifest = json_decode(file_get_contents($manifest), true);
 if ($manifest['title'] !== false) {
 	$title = $manifest['name'];
 }
