@@ -3,7 +3,7 @@ let content = null;
 let file = null;
 
 $(function () {
-	let formatMenu = new Menu('Format');
+	let formatMenu = new Menu('Format', 2);
 	formatMenu.add('Bold', 'command+b', function () {
 		format('bold');
 	});

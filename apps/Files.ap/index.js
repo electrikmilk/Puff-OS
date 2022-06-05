@@ -1,7 +1,7 @@
 cwd = '/';
 
 $(function () {
-	let viewMenu = new Menu('View');
+	let viewMenu = new Menu('View', 2);
 	viewMenu.add('As List', function () {
 
 	});
