@@ -8,13 +8,9 @@ echo "<p>New Session: <span id='session_id'></span> " . date('Y-m-d H:i:s') . '<
 <div class="backlog">
 	<ul></ul>
 </div>
-<table>
-	<tr>
-		<td><span id="signature"></span></td>
-		<td>
-			<form id="terminal">
-				<input type="text" autofocus/>
-			</form>
-		</td>
-	</tr>
-</table>
+<div class="input">
+	<span id="signature"></span>
+	<form id="input">
+		<input type="text" autofocus/>
+	</form>
+</div>

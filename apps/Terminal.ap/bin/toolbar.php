@@ -7,13 +7,13 @@ $command = new Command([
 if (count($args[0])) {
 	switch ($args[0]) {
 		case 'start':
-			$command->script('main.apps.toolbar();');
+			$command->script('main.Toolbar.start();');
 			break;
 		case 'refresh':
-			$command->script('main.apps.toolbarApps();');
+			$command->script('main.Toolbar.refresh();');
 			break;
 		case 'close':
-			$command->script('main.apps.closeToolbar();');
+			$command->script('main.Toolbar.kill();');
 			break;
 	}
 }

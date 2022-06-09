@@ -15,6 +15,8 @@ $(function () {
 			}
 			Window.title(filename);
 		}
+		fileMenu.remove();
+		editMenu.remove();
 	});
 });
 
