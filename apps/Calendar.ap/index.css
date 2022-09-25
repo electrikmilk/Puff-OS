@@ -1,0 +1,32 @@
+html, body{ overflow: hidden; }
+.display.month{ font-size: 2rem; margin: 0 auto; } /* month / year */
+.display.week div{ padding:0 0.2em; } /* week */
+.display.week{ font-size:1.2em; }
+
+.week{ display: grid; grid-template-columns: repeat(7, 1fr); } /* week grid */
+.calendar .row{ display:flex; flex-flow:row nowrap; }
+
+.day{ cursor:pointer; border-radius: 5px; }
+.day:hover{ background: linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%); color: white; }
+.day.today{background: linear-gradient(rgb(149 224 59) 0%, rgb(16 233 31) 100%); color: white; }
+.day.active { background: linear-gradient(rgb(179 98 251) 0%, rgb(131 16 233) 100%)!important; color: white; }
+.blank.day{
+  background-color: rgba(30,30,30, 0.2);
+  color:hsl(240,20%,50%);
+  filter:grayscale(0.5);
+  opacity:0.4;
+}
+
+.day:hover, .day:active, .blank.day:hover, .blank.day:active{ background: linear-gradient(rgba(98, 177, 251, 1) 0%, rgba(16, 128, 233, 1) 100%); color: white; }
+.mini .days{ grid-auto-rows: min-content; }
+.mini .day{ text-align:center; font-size:1.2rem; }
+.calendar .mainheader{ display:flex; }
+
+.calendar .arrow {
+    transform: scale(3);
+    line-height: 14px;
+    cursor: pointer;
+    margin: 14px;
+}
+.calendar .arrow.left:after{ content:"\02039"; }
+.calendar .arrow.right:after{ content:"\0203A"; }

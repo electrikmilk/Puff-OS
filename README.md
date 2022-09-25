@@ -2,7 +2,7 @@
 
 - **Status:** WIP
 - **Recommended PHP Version:** 7.4
-- **Currently tested using:** Google Chrome
+- **Currently tested using:** Google Chrome, Microsoft Edge, and Brave Browser
 
 Puff OS is a [web desktop](https://en.wikipedia.org/wiki/Web_desktop), made in a LAMP environment.
 
@@ -25,6 +25,7 @@ desktop and run applications, etc. It runs in a popup window that will go fullsc
 - Template App
 - UI Gallery
 - Bug Reporter
+- Calendar
 
 ## It can...
 
