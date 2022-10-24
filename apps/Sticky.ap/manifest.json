@@ -1,0 +1,19 @@
+{
+  "dev": true,
+  "name": "Sticky",
+  "version": "1.0.0",
+  "description": "Post sticky notes on your desktop",
+  "author": "Brandon",
+  "width": "350px",
+  "height": "300px",
+  "import": [
+    "menu",
+    "applet"
+  ],
+  "applet": {
+    "icon": "applet_icon.png",
+    "type": "popup",
+    "width": "100px",
+    "height": "200px"
+  }
+}

@@ -1,0 +1,29 @@
+body {
+	height: 100%;
+}
+
+body.red {
+	background: palevioletred;
+}
+
+body.green {
+	background: palegreen;
+}
+
+body.yellow {
+	background: palegoldenrod;
+}
+
+body.blue {
+	background: paleturquoise;
+}
+
+textarea {
+	background: none !important;
+	width: -webkit-fill-available;
+	height: 94vh;
+	border: none;
+	resize: none;
+	box-shadow: none !important;
+	outline: none !important;
+}
