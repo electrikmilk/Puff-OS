@@ -2,7 +2,7 @@
 
 - **Status:** WIP
 - **Recommended PHP Version:** 7.4
-- **Currently tested using:** Google Chrome, Microsoft Edge, and Brave Browser
+- **Currently tested using:** Google Chrome
 
 Puff OS is a [web desktop](https://en.wikipedia.org/wiki/Web_desktop), made in a LAMP environment.
 
@@ -52,7 +52,7 @@ from GNOME 2 in Ubuntu as those are UIs I grew up admiring.
 
 ![Login Screenshot](https://i.imgur.com/8pYEPAb.jpeg)
 
-### May 19, 2021- Desktop screenshot
+### May 19, 2021 - Desktop screenshot
 
 ![Desktop Screenshot](https://i.imgur.com/wnRr2Xe.png)
 
